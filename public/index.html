@@ -4,14 +4,77 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <link rel="icon" type="image/x-icon" href="<%= BASE_URL %>icon.jpg">
+    <link rel="stylesheet" href="<%= BASE_URL %>loading-div.css">
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
     <noscript>
       <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
+    <!-- 首屏加载 -->
+    <!-- 首屏加载动画 -->
+    <div id="init-loading-div">
+      <img id="load-icon" src="<%= BASE_URL %>icon.jpg"></img>
+      <div id="load-text">页面加载中</div>
+      <div id="load-text-en">Yuemin Zhao Personal Website</div>
+      <div id="load-ul">
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+    </div>
     <div id="app"></div>
     <!-- built files will be auto injected -->
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue-router@3.3.4/dist/vue-router.min.js"></script>
+
+    <!-- Element-Ui：引入样式,组件库 -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/element-ui@2.13.2/lib/theme-chalk/index.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/element-ui@2.13.2/lib/theme-chalk/display.css">
+		<script src="https://cdn.jsdelivr.net/npm/element-ui@2.13.2/lib/index.js"></script>
+		<!--<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">-->
+		<!--<script src="https://unpkg.com/element-ui@2.13.2/lib/index.js"></script>-->
+
+		<!--动画库-->
+		<!--<script src="https://cdnjs.com/libraries/bodymovin" type="text/javascript"></script>-->
+
+		<script src="https://cdn.jsdelivr.net/npm/echarts@4.8.0/dist/echarts.min.js"></script>
+
+		<!-- vant：引入样式文件 -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vant@2.8/lib/index.css"/>
+		<!-- vant：引入 Vant 的 JS 文件 -->
+		<script src="https://cdn.jsdelivr.net/npm/vant@2.8/lib/vant.min.js"></script>
+
+		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+		<!--mini滚动条样式-->
+		<style>
+    ::-webkit-scrollbar{
+	    width: 8px !important;
+	    height: 8px !important;
+	    background:transparent;
+	    filter: invert();
+    }
+    ::-webkit-scrollbar:hover {background: rgba(128, 128, 128, 0.2);}
+    ::-webkit-scrollbar-thumb {
+	    border: 1px solid rgba(255, 255, 255, 0.4) !important;
+	    background-color: rgba(0, 0, 0, 0.4) !important;
+	    z-index: 2147483647;
+	    -webkit-border-radius: 12px;
+	    background-clip: content-box;
+    }
+    ::-webkit-scrollbar-corner {
+	    background: rgba(255, 255, 255, 0.3);
+	    border: 1px solid transparent
+    }
+    ::-webkit-scrollbar-thumb:hover {background-color: rgba(0, 0, 0, 0.8) !important;}
+    ::-webkit-scrollbar-thumb:active {background-color: rgba(0, 0, 0, 0.6) !important}
+		</style>
   </body>
 </html>

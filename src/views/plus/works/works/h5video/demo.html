@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>H5-video</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script type="text/javascript" src="demo.js"></script>
+	</head>
+
+	<body>
+		<header>
+			<span>H5-video</span>
+		</header>
+		<div class="contents">
+			<ul class="content-list"></ul>
+		</div>
+	</body>
+
+<style>
+* {margin: 0;padding: 0;color: #333333;}
+html,body {width: 100%;height: 100%;}
+ul,ol {list-style: none;}
+img {border: 0;vertical-align: middle;width: 100%;}
+
+header {
+    text-align: center;
+    height: 50px;
+	background: #FAFAFA;
+	-webkit-box-shadow: 0 1px 6px #ccc;
+    box-shadow: 0 1px 6px #ccc;
+}
+header span {
+	display: inline-block;
+    height: 50px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 50px;
+}
+.contents {
+	width: 100%;
+	height: calc(100% - 50px);
+	overflow: scroll;
+}
+.content-list {padding: 15px;}
+.content {
+    margin-bottom: 15px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+video::-webkit-media-controls-fullscreen-button {
+    display: none;
+    z-index: -1;
+}
+</style>
+
+</html>

@@ -3,14 +3,6 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const CompressionWebpackPlugin = require('compression-webpack-plugin')
 const productionGzipExtensions = ['js', 'css']
 module.exports = {
-//pluginOptions: {
-//  'style-resources-loader': {
-//    preProcessor: 'sass',
-//    patterns: [
-//      path.resolve(__dirname, './src/assets/styles/*.scss')      //你的.scss文件所在目录
-//    ]
-//  }
-//},
   configureWebpack:{
     externals: {
       'vue': 'Vue',

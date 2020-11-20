@@ -2,13 +2,14 @@
 <template>
   <div class="content" style="position: absolute; top:0; width: 100%; bottom: 0;">
   	<iframe
-  		src="./works/h5video/demo.html"
+  		src="http://ymzhao.top/h5video"
   		style="height: 100%;width:100%;"
   		frameborder="no"
   		border="0"
   		marginWidth=0
-			marginHeight=0></iframe>
+		marginHeight=0></iframe>
   </div>
+<!-- src="./works/h5video/demo.html" -->
 </template>
 
 <script>

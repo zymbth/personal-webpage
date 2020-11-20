@@ -2,12 +2,12 @@
 <template>
   <div class="content" style="position: absolute; top:0; width: 100%; bottom: 0;">
   	<iframe
-  		src="./works/localsearch/demo.html"
+  		src="http://ymzhao.top/localsearch"
   		style="height: 100%;width:100%;"
   		frameborder="no"
   		border="0"
   		marginWidth=0
-			marginHeight=0></iframe>
+		marginHeight=0></iframe>
   </div>
 </template>
 

@@ -8,7 +8,7 @@ module.exports = {
       'vue': 'Vue',
       'element-ui': 'ElementUI',
       'axios': 'axios',
-      'xlsx': 'XLSX',
+      // 'xlsx': 'XLSX',
       'echarts': 'echarts',
       'vue-router': 'VueRouter'
     },

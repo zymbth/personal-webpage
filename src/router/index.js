@@ -43,7 +43,7 @@ Vue.use(VueRouter)
 		name: 'h5video',
 		component: _import('plus/works/h5video')
 	},
-	{
+	/* {
 		path: '/plus/works/excelT',
 		name: 'excelAndTable',
 		component: _import('plus/works/tables/excelT')
@@ -52,7 +52,7 @@ Vue.use(VueRouter)
 		path: '/plus/works/editable-table',
 		name: 'editableTable',
 		component: _import('plus/works/tables/editableTable')
-	},
+	}, */
 	{
 		path: '/plus/works/three-level-slide',
 		name: 'threeLevSlide',

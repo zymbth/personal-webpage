@@ -8,8 +8,10 @@
   },
   "dependencies": {
     "axios": "^0.19.2",
+    "babel-runtime": "^6.26.0",
     "core-js": "^3.6.5",
     "echarts": "^4.8.0",
+    "element-ui": "^2.14.1",
     "file-saver": "^2.0.2",
     "iscroll": "^5.2.0",
     "qs": "^6.9.4",
@@ -21,8 +23,7 @@
     "vue-markdown": "^2.2.4",
     "vue-router": "^3.2.0",
     "vue-typed-js": "^0.1.2",
-    "vuex": "^3.4.0",
-    "xlsx": "^0.16.2"
+    "vuex": "^3.4.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.4.0",

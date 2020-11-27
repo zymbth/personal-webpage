@@ -1,12 +1,13 @@
-<!-- 主页 -->
+<!-- 作品页 -->
 <template>
   <div class="plus-works">
   	<h3>作品集</h3>
-	  <el-carousel :interval="4000" type="card" height="400px">
+	  <el-carousel :interval="5000" type="card" height="400px">
 			<el-carousel-item v-for="(item, idx) in works" :key="idx" class="display-card">
 				<p>{{item.title}}</p>
 				<img v-if="item.img" :src="item.img" /><br />
-				<router-link v-if="item.pathName" :to="{name:item.pathName}">查看详情</router-link>
+				<a v-if="item.url" :href="item.url" target="_blank">查看详情</a>
+				<router-link v-else-if="item.pathName" :to="{name:item.pathName}">查看详情</router-link>
 			</el-carousel-item>
 		</el-carousel>
   </div>
@@ -20,22 +21,27 @@ export default {
     return {
     	works: [{
     		title: 'H5: Bmap local-search',
+			url: '',
     		pathName: 'bmap',
     		img: this.imgurl + 'works/bmp/bmap_profile.jpg'
     	},{
     		title: 'H5: videos in page',
+			url: '',
     		pathName: 'h5video',
     		img: this.imgurl + 'works/h5video/h5video_profile.jpg'
     	},{
     		title: 'Data transmission between Excel and Table',
-    		pathName: 'excelAndTable',
+			url: 'http://ymzhao.top/myvuetb/#/excel',
+    		pathName: '', // excelAndTable
     		img: this.imgurl + 'works/tables/excelT.jpg'
     	},{
     		title: 'Editable Table Based on ElementUI',
-    		pathName: 'editableTable',
+			url: 'http://ymzhao.top/myvuetb/#/editable_v2',
+    		pathName: '', // editableTable
     		img: this.imgurl + 'works/tables/editableT.jpg'
     	},{
     		title: 'three-level-slide',
+			url: '',
     		pathName: 'threeLevSlide',
 //  		img: this.imgurl + 'works/tables/editableT.jpg'
     	}]

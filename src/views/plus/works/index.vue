@@ -39,12 +39,11 @@ export default {
 			url: 'http://ymzhao.top/myvuetb/#/editable_v2',
     		pathName: '', // editableTable
     		img: this.imgurl + 'works/tables/editableT.jpg'
-    	},{
+    	}/* ,{
     		title: 'three-level-slide',
 			url: '',
-    		pathName: 'threeLevSlide',
-//  		img: this.imgurl + 'works/tables/editableT.jpg'
-    	}]
+    		pathName: 'threeLevSlide'
+    	} */]
     };
   },
   mounted() {},

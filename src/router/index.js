@@ -53,11 +53,11 @@ Vue.use(VueRouter)
 		name: 'editableTable',
 		component: _import('plus/works/tables/editableTable')
 	}, */
-	{
+	/* {
 		path: '/plus/works/three-level-slide',
 		name: 'threeLevSlide',
 		component: _import('plus/works/threeLevSlide')
-	},
+	}, */
 	
 	{
 		path: '/plus/plugs',

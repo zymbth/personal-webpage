@@ -54,7 +54,7 @@ export default {
   methods: {
   	scrollToTop() {
   		const iscroll = this.scroll_goods
-			iscroll.scrollToElement('.ele-34',500)
+		iscroll.scrollToElement('.ele-34',500)
 //		iscroll.goToPage(0,10)
   		iscroll.refresh()
 //    iscroll.scrollTo(0, 0, 100)

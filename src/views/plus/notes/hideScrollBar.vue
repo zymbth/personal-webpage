@@ -17,8 +17,22 @@
 		</div>
 		
 		<h5>全局更改滚动条样式</h5>
-		<vue-markdown>
-```html
+		<p>{{codeStr}}</p>
+		
+  </div>
+</template>
+
+<script>
+export default {
+  components: {},
+  data() {
+    return {
+    	demoText: '人类所有的实践活动归根结底都是劳动。劳动是马克思揭示人类社会发展一般规律的出发点，'+
+    		'劳动价值论是马克思科学社会主义的理论根基。因此，新时代强调劳动教育既是对“知行合一”的继承和发展，'+
+    		'也是贯彻马克思主义指导思想的必然要求。《意见》明确指出劳动教育的总体目标是“通过劳动教育，'+
+    		'使学生能够理解和形成马克思主义劳动观，牢固树立劳动最光荣、劳动最崇高、劳动最伟大、劳动最美丽的观念”。'+
+    		'概言之，就是培养马克思主义劳动观。马克思无疑是践行马克思主义劳动观的第一典范。',
+		codeStr: `
 ::-webkit-scrollbar{
 	width: 8px !important;
 	height: 8px !important;
@@ -39,25 +53,7 @@
 }
 ::-webkit-scrollbar-thumb:hover {background-color: rgba(0, 0, 0, 0.8) !important;}
 ::-webkit-scrollbar-thumb:active {background-color: rgba(0, 0, 0, 0.6) !important}
-```
-		</vue-markdown>
-		
-  </div>
-</template>
-
-<script>
-import VueMarkdown from 'vue-markdown'
-export default {
-  components: {
-  	VueMarkdown
-  },
-  data() {
-    return {
-    	demoText: '人类所有的实践活动归根结底都是劳动。劳动是马克思揭示人类社会发展一般规律的出发点，'+
-    		'劳动价值论是马克思科学社会主义的理论根基。因此，新时代强调劳动教育既是对“知行合一”的继承和发展，'+
-    		'也是贯彻马克思主义指导思想的必然要求。《意见》明确指出劳动教育的总体目标是“通过劳动教育，'+
-    		'使学生能够理解和形成马克思主义劳动观，牢固树立劳动最光荣、劳动最崇高、劳动最伟大、劳动最美丽的观念”。'+
-    		'概言之，就是培养马克思主义劳动观。马克思无疑是践行马克思主义劳动观的第一典范。',
+`
     };
   },
   created() {},

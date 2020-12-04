@@ -88,7 +88,7 @@ export default {
 	.mingyan {
 		position: absolute;
 		bottom: 20px;
-		right: 20px;
+		right: 22px;
 		width: 30vw;
 		min-height: 50px;
 		p {

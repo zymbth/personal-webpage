@@ -76,7 +76,7 @@ const en = {
 			posi: "Development intern",
 			contents: [
 				"Colleagues’ guidance and director’s guidance quickly dissipated the worries when I first started.",
-				"Completely participated in a front-end and back-end separation project, contributing 40% of the front-end and 50% of the back-end code. Thanks for this internship, which bring me full understanding and interest in the front-end programming."
+				"Completely participated in a front-end and back-end separation project, contributing 40% of the front-end and 70% of the back-end code. Thanks for this internship, which bring me full understanding and interest in the front-end programming."
 			]
 		},{
 			time: "2015/9/1",

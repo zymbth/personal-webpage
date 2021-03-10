@@ -28,7 +28,7 @@ const en = {
 	},
 	cover: {
 		'selfIntro': "I'm Yuemin Zhao",
-		'names': ['Frontend Developer', 'Web Developer', 'Full Stack Developer'],
+		'names': ['Frontend Developer', 'Java Developer', 'Full Stack Developer'],
 		'typeSpeed': '50',
 		'backSpeed': '30'
 	},
@@ -42,11 +42,11 @@ const en = {
 		'echart': {
 			'datas': [
 				['score', '%', 'skill', 'description'],
-				[40, 40, 'Python', 'Mastered the basic grammar, wrote recommendation algorithms'],
-				[60, 60, 'Java', 'Familiar with the basic grammar, completed several interface projects'],
-				[70, 70, 'CSS', 'Front-end basic skills'],
-				[85, 85, 'HTML', 'Front-end basic skills'],
+				[88, 88, 'Java', 'Good at SpringBoot+SpringMVC+MybatisPlus'],
 				[85, 85, 'JavaScript', 'Two years experience, good at vue and angular']
+				[85, 85, 'HTML', 'Front-end basic skills'],
+				[70, 70, 'CSS', 'Front-end basic skills'],
+				[40, 40, 'Python', 'Mastered the basic grammar, wrote recommendation algorithms'],
 			],
 			'legend': ['Nobody knows better than me', 'Know nothing']
 		},

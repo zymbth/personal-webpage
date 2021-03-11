@@ -11,6 +11,7 @@ module.exports = {
       // 'xlsx': 'XLSX',
       'echarts': 'echarts',
       'vue-router': 'VueRouter'
+	  // 'vue-lottie': 'Lottie'
     },
     plugins: [
     	new CompressionWebpackPlugin({

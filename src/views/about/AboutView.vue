@@ -31,7 +31,12 @@
 				<!--右侧：文字简介-->
 				<el-col :xs="24" :sm="12" class="about-descr">
 					<div class="animation">
-						<lottie :options="defaultOptions" :height="100" :width="100" v-on:animCreated="handleAnimation"></lottie>
+						<lottie
+						:options="defaultOptions"
+						:height="100"
+						:width="100"
+						v-on:animCreated="handleAnimation"
+						></lottie>
 					</div>
 					<h4>{{$t('about.selfIntro.title')}}</h4>
 					<p style="text-align:justify;">{{$t('about.selfIntro.text')}}</p>

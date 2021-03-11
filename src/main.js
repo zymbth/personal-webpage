@@ -7,6 +7,7 @@ import echarts from 'echarts'
 import store from './store'
 import i18n from './i18n/i18n'
 import VueTypedJs from 'vue-typed-js'
+// import Lottie from 'vue-lottie';
 import './utils/fetch'
 // import IScrollView from 'vue-iscroll-view'
 // import IScroll from 'iscroll'
@@ -16,6 +17,8 @@ Vue.config.productionTip = false
 
 //Vue.use(ElementUI);
 Vue.use(VueTypedJs);
+// Vue.use(Lottie);
+// Vue.prototype.$Lottie = Lottie;
 // Vue.use(IScrollView, IScroll);
 // Vue.prototype.$XLSX = XLSX
 

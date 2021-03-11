@@ -8,8 +8,10 @@ import qs from 'qs';
 //Vue.prototype.baseURL = host+'/website';
 
 //var host = 'http://172.16.231.174';
-var host = 'http://47.98.63.174';
-axios.defaults.baseURL = host+'/website';
+const host = 'http://47.98.63.174';
+const baseURL = host + '/website';
+// axios.defaults.baseURL = host+'/website';
+// axios.defaults.baseURL = 'https://assets8.lottiefiles.com'; // lottie专用
 Vue.prototype.baseURL = host+'/website';
 
 axios.defaults.withCredentials = false;
@@ -53,7 +55,7 @@ const fetch = (url, method, data) => {
 	
   let httpDefaultOpts = { //http默认配置
     method: method,
-    url: url,
+    url: baseURL + url,
     params:data,
     data:qs.stringify(data),
     headers: method=='get'?{

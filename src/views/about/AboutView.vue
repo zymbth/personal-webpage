@@ -31,12 +31,8 @@
 				<!--右侧：文字简介-->
 				<el-col :xs="24" :sm="12" class="about-descr">
 					<div class="animation">
-						<lottie
-						:options="defaultOptions"
-						:height="100"
-						:width="100"
-						v-on:animCreated="handleAnimation"
-						></lottie>
+						<div id="bm" class="lottie"></div>
+						<!-- path="packages/lf20_0j4kzlaf.json" -->
 					</div>
 					<h4>{{$t('about.selfIntro.title')}}</h4>
 					<p style="text-align:justify;">{{$t('about.selfIntro.text')}}</p>
@@ -47,17 +43,12 @@
 </template>
 
 <script>
-import Lottie from 'vue-lottie';
 //import * as Echarts from 'echarts';
-import * as animationData from './mountain_1.json';
 
 export default {
-	components: {
-		'lottie': Lottie
-	},
+	components: {},
 	data() {
 		return {
-			defaultOptions: {animationData: animationData.default },
 			loading: true,
 			echarts: null,
 			myChart: null,
@@ -66,6 +57,13 @@ export default {
 	},
 	mounted() {
 		this.setEchart();
+		let animation = bodymovin.loadAnimation({
+		  container: document.getElementById('bm'),
+		  renderer: 'svg',
+		  loop: true,
+		  autoplay: true,
+		  path: 'animation/mountain_1.json'
+		})
 	},
 	methods: {
 		resizeEchart() {
@@ -120,10 +118,6 @@ export default {
 			this.loading = false;
 			this.myChart.setOption(option);
         },
-        handleAnimation: function(anim) {
-			this.anim = anim;
-		},
-		play: function () {this.anim.play();},
 	},
 	created() {}
 };
@@ -157,5 +151,9 @@ export default {
 		top: -20px;
 		right: 0;
 	}
+}
+#bm {
+  width: 100%;
+  height: 100%;
 }
 </style>

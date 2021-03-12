@@ -1,18 +1,12 @@
 // import Vue from 'vue';
 // import axios from 'axios';
 import qs from 'qs';
-//import router from '@/router';
-
-//var host = 'http://localhost:13145';
-//axios.defaults.baseURL = host+'/website';
-//Vue.prototype.baseURL = host+'/website';
 
 // const host = 'http://47.98.63.174';
 const host = 'http://ymzhao.top';
-const baseURL = host + '/website';
-// axios.defaults.baseURL = host+'/website';
-// Vue.prototype.baseURL = host+'/website';
-// axios.defaults.baseURL = 'https://assets8.lottiefiles.com'; // lottie专用
+const baseURL = host + '/demopj';
+// axios.defaults.baseURL = host+'/demopj';
+// Vue.prototype.baseURL = host+'/demopj';
 
 axios.defaults.withCredentials = false;
 //axios.defaults.timeout = 10000;
@@ -20,8 +14,6 @@ axios.defaults.withCredentials = false;
 
 axios.interceptors.request.use(
   config => {
-//	var se = localStorage.getItem("se");
-//	if(!se) router.replace("/login");
 		return config;
   },
   err => {
@@ -30,17 +22,6 @@ axios.interceptors.request.use(
 )
 axios.interceptors.response.use(
 	res => {
-		/*var errorcode = res.data.errorcode;
-		if(errorcode <= 4 && errorcode > 0) {
-      let route = router.history.current.fullPath
-      let parent_route = { 
-        route
-      }
-      if (route != '/login') sessionStorage.setItem('parent_route', JSON.stringify(parent_route));
-      if(localStorage.se != "") localStorage.se="";
-			router.replace("/login");
-		}
-		if(errorcode == 5) router.replace("/registerBind");*/
     return res;
   },
   err => {
@@ -93,6 +74,5 @@ const fetchPost = (url, data) => {
 	return fetch(url, "post", data);
 }
 
-//Vue.prototype.Axios = axios; //用于上传
-Vue.prototype.fetchGet = fetchGet;
-Vue.prototype.fetchPost = fetchPost;
+Vue.prototype.fetchGetDemo = fetchGet;
+Vue.prototype.fetchPostDemo = fetchPost;

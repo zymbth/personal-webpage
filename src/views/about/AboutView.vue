@@ -50,14 +50,14 @@ export default {
 	data() {
 		return {
 			loading: true,
-			echarts: null,
+			// echarts: null,
 			myChart: null,
 			anim: null,
 		};
 	},
 	mounted() {
 		this.setEchart();
-		let animation = bodymovin.loadAnimation({
+		let animation = lottie.loadAnimation({
 		  container: document.getElementById('bm'),
 		  renderer: 'svg',
 		  loop: true,
@@ -70,8 +70,9 @@ export default {
 			this.myChart.resize();
 		},
 		setEchart() {
-			this.echarts = require('echarts');
-			this.myChart = this.echarts.init(document.getElementById('echart-skill'));
+			// this.echarts = require('echarts');
+			// this.myChart = this.echarts.init(document.getElementById('echart-skill'));
+			this.myChart = echarts.init(document.getElementById('echart-skill'));
 
 			var option = {
 				tooltip: {

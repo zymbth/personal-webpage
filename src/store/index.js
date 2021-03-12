@@ -1,4 +1,4 @@
-import Vue from 'vue'
+// import Vue from 'vue'
 import Vuex from 'vuex'
 import db from '@/utils/localstorage' //导入持久化缓存工具
 

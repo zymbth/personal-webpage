@@ -1,10 +1,10 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
+// import Vue from 'vue'
+// import VueRouter from 'vue-router'
 const _import = file => () =>
 	import('@/views/' + file + '.vue');
 //component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
 
-Vue.use(VueRouter)
+// Vue.use(VueRouter)
 
   const routes = [
   {

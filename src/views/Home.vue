@@ -122,9 +122,14 @@ export default {
 		this.getPageDistance();
 		this.getPulleyTopDistance();
 
-		this.fetchPost("/user/login", {usrname: 'user1', pwd: '123456'}).then(res => {
-//			console.log(res);
-		})
+		this.fetchPost("/zymwb/login/log_in", {username: 'admin', pwd: '123abc'}).then(res => {
+			console.log(res);
+		});
+		
+		/* this.fetchGetDemo("/demo_pj/test/demo").then(res => {
+			console.log(res);
+		}); */
+
 		var that = this;
 		window.addEventListener('resize', debounce(function(){
 			that.getPageDistance();

@@ -119,23 +119,40 @@ export default {
   created() {},
   mounted() {
 	this.devTalks();
-		this.getPageDistance();
-		this.getPulleyTopDistance();
+	this.getPageDistance();
+	this.getPulleyTopDistance();
 
-		this.fetchPost("/zymwb/login/log_in", {username: 'admin', pwd: '123abc'}).then(res => {
-			console.log(res);
+	this.fetchPost("/zymwb/login/log_in", {username: 'admin', password: '123abc'}).then(res => {
+		console.log(res)
+		const result = res.data
+		if(result != null && result.code == 0) {
+			localStorage.setItem('se', result.data)
+			/* this.$message({
+				message: '登录成功',
+				type: 'success'
+			}) */
+		}/* else {
+			this.$message.error(message: '登录失败')
+		} */
+	});
+	
+	const _this = this
+	setTimeout(function(){
+		_this.fetchGet("/zymwb/test/demo").then(res => {
+			console.log(res)
 		});
-		
-		/* this.fetchGetDemo("/demo_pj/test/demo").then(res => {
-			console.log(res);
-		}); */
+	}, 2000)
+	
+	/* this.fetchGetDemo("/demo_pj/test/demo").then(res => {
+		console.log(res);
+	}); */
 
-		var that = this;
-		window.addEventListener('resize', debounce(function(){
-			that.getPageDistance();
-			that.$refs.about.resizeEchart();
-		}, 100, that));
-	},
+	var that = this;
+	window.addEventListener('resize', debounce(function(){
+		that.getPageDistance();
+		that.$refs.about.resizeEchart();
+	}, 100, that));
+  },
   methods: {
 		eTop(id) {
 			return document.getElementById(id).offsetTop;

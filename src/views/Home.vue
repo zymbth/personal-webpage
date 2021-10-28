@@ -42,7 +42,11 @@
 			<el-row style="height:100%;">
 				<!--copyright-->
 				<el-col :span="12" style="height: 100%;">
-					<p class="copyright">© Copyright 2020 Yuemin Zhao. All rights reserved.</p>
+					<p class="copyright">
+						<span>© Copyright 2021 Yuemin Zhao. All rights reserved.</span>
+						<br/>
+						<a href="https://beian.miit.gov.cn/" target="_blank">粤ICP备2021132566号-1</a>
+					</p>
 				</el-col>
 				<!--social-link-->
 				<el-col :span="12" class="social-info">
@@ -233,12 +237,15 @@ export default {
 	
 	.copyright {
 		text-align: left;
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+		height: 100%;
+		width: 100%;
+		margin: 0;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: flex-start;
+
+		a {color:#61a8e1;text-decoration:none;}
 	}
 	.social-info {
 		height: 100%;

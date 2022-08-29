@@ -1,33 +1,8 @@
-// import Vue from 'vue'
+import { createApp } from 'vue'
+import './style.css'
 import App from './App.vue'
 import router from './router'
-//import ElementUI from 'element-ui'
-//import 'element-ui/lib/theme-chalk/index.css'
-// import echarts from 'echarts'
-import store from './store'
-import i18n from './i18n/i18n'
-import VueTypedJs from 'vue-typed-js'
-// import Lottie from 'vue-lottie';
-import './utils/fetch'
-// import './utils/fetch1'
-// import IScrollView from 'vue-iscroll-view'
-// import IScroll from 'iscroll'
-// import XLSX from 'xlsx'
 
-Vue.config.productionTip = false
-
-//Vue.use(ElementUI);
-Vue.use(VueTypedJs);
-// Vue.use(Lottie);
-// Vue.prototype.$Lottie = Lottie;
-// Vue.use(IScrollView, IScroll);
-// Vue.prototype.$XLSX = XLSX
-
-Vue.prototype.imgurl = 'https://ymzhao-oss.oss-cn-hangzhou.aliyuncs.com/webapp/';
-
-new Vue({
-  router,
-  store,
-  i18n,
-  render: h => h(App)
-}).$mount('#app')
+const app = createApp(App)
+app.use(router)
+app.mount('#app')

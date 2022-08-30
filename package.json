@@ -9,10 +9,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "echarts": "^5.3.3",
     "element-plus": "^2.2.15",
     "typed.js": "^2.0.12",
     "vue": "^3.2.37",
-    "vue-router": "^4.0.13"
+    "vue-router": "^4.0.13",
+    "ymzhao-utils": "^0.1.5"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^3.0.3",

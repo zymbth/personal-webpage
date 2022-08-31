@@ -24,6 +24,7 @@
 
   .intro-content {
     text-align: center;
+    color: #fff;
   }
 }
 </style>

@@ -1,3 +1,8 @@
+<script setup>
+import { getCurrentInstance } from 'vue'
+
+const $imgurl = getCurrentInstance().appContext.config.globalProperties.$imgurl
+</script>
 <template>
   <footer class="footer">
     <el-row style="height:100%;">
@@ -15,7 +20,7 @@
           <el-col :span="8">
             <el-popover placement="top" width="200" trigger="hover" style="cursor: pointer;">
               <template #default>
-                <img src="../assets/img/wechat.png" class="popover-content" style="width:200px;height:auto;"/>
+                <img :src="$imgurl+'mywechat.jpg'" class="popover-content" style="width:200px;height:auto;"/>
               </template>
               <template #reference>
                 <img src="../assets/img/wechat.png"/>

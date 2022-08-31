@@ -5,6 +5,7 @@ import Cover from './cover.vue'
 import About from './about.vue'
 import Career from './career.vue'
 import Footer from '../footer.vue'
+import MySpace from './my-space.vue'
   
 const pageIndex = ref('1')
   
@@ -38,6 +39,7 @@ onMounted(() => {
     <el-scrollbar>
       <Cover />
       <About />
+      <MySpace />
       <Career />
     
       <Footer />

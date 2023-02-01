@@ -1,23 +1,13 @@
 <script setup>
-import { ref, onMounted } from 'vue'
-import Typed from 'typed.js'
+import { ref } from 'vue'
 import Cover from './cover.vue'
 import About from './about.vue'
 import Career from './career.vue'
 import Footer from '../footer.vue'
 import MySpace from './my-space.vue'
-  
+
 const pageIndex = ref('1')
-  
-onMounted(() => {
-  new Typed('.intro-typed', {
-    strings: ['前端开发工程师', 'Java开发工程师', '全栈开发工程师'],
-    typeSpeed: 100,
-    backSpeed: 60,
-    loop: true
-  })
-})
-    
+
 </script>
 <template>
   <div class="container">

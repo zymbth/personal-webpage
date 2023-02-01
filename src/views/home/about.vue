@@ -1,7 +1,6 @@
 <script setup>
 import { ref, onMounted, getCurrentInstance } from 'vue'
 
-const $imgurl = getCurrentInstance().appContext.config.globalProperties.$imgurl
 const $echarts = getCurrentInstance().appContext.config.globalProperties.$echarts
 const skillChart = ref()
 
@@ -31,7 +30,7 @@ onMounted(() => {
       source: [
         ['score', '%', 'skill', 'description'],
         [85, 85, 'Java', '擅长SpringBoot+SpringMVC+MybatisPlus框架'],
-        [90, 90, 'JavaScript', '四年实战经验，多个基于vue、angular的项目，拥有原生JS、H5开发经验'],
+        [90, 90, 'JavaScript', '五年实战经验，多个基于vue、angular的项目，拥有原生JS、H5开发经验'],
         [85, 85, 'HTML', '前端基础技能'],
         [70, 70, 'CSS', '前端基础技能'],
         [50, 50, 'Python', '掌握基本语法，编写过推荐算法']

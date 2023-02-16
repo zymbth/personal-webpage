@@ -1,0 +1,291 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <script src="https://unpkg.com/vue@next"></script>
+    <title>2048</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="panel-wrap">
+        <div id="panel">
+          <div v-for="(row,rowIdx) in data" :key="rowIdx">
+            <div v-for="(cell,cellIdx) in row" :key="cellIdx" class="cell">
+              <div
+                :class="['cell-block',{ appear: rowIdx === appear[0] && cellIdx === appear[1] }]"
+                :style="{
+                  'background-color': getBlockBg(data[rowIdx][cellIdx]),
+                }"
+              >{{ data[rowIdx][cellIdx] }}</div>
+            </div>
+          </div>
+        </div>
+        <div id="opt" style="text-align:center">
+          <button @click="handleOpt('up')">↑</button>
+          <br/>
+          <button @click="handleOpt('left')">←</button>
+          <button @click="handleOpt('down')">↓</button>
+          <button @click="handleOpt('right')">→</button>
+        </div>
+      </div>
+    </div>
+    <script>
+      const App = {
+        data() {
+          return {
+            data: [
+              [undefined,undefined,undefined,undefined],
+              [undefined,undefined,undefined,undefined],
+              [undefined,undefined,undefined,undefined],
+              [undefined,undefined,undefined,undefined]
+            ],
+            failedFlag: false,
+            colors: [
+              '#cef4f5','#91f3f2','#01dcf2','#00a7f5',
+              '#749ffb','#0177e1','#315091','#0442e3',
+              '#6156d9','#a580e9','#b063ff','#9d00e5',
+              '#8a01ed'
+            ],
+            appear: [-1,-1],
+            loading: false,
+            started: false,
+          };
+        },
+        created() {
+          window.addEventListener('keyup', ({ keyCode }) => {
+            this.handleOpt({
+              37: 'left',
+              39: 'right',
+              38: 'up',
+              40: 'down'
+            }[keyCode])
+          })
+        },
+        methods: {
+          handleOpt(type) {
+            if(this.loading) return
+            if(this.failedFlag) return
+            if(!['left','right','up','down'].includes(type)) return
+            this.loading = true
+            this.moveAndMerge(type).finally(_ => {
+              this.loading = false
+            })
+          },
+          // 移动并合并块
+          moveAndMerge(type) {
+            return new Promise((resolve,reject) => {
+              let tmpData, flag
+              if(['up','down'].includes(type)) {
+                tmpData = this.transMatrix(this.data)
+                flag = true
+              } else {
+                tmpData = this.data
+                flag = false
+              }
+              // 是正方向？
+              let direction = ['up','left'].includes(type)
+              if(!direction) {
+                tmpData = this.reserveRow(tmpData)
+                flag = true
+              }
+  
+              let movedFlag = false
+              tmpData.forEach(p => {
+                // 移动至一端
+                let count = 0
+                p.forEach((p1,idx) => {
+                  if(!p1) return
+                  if(!movedFlag && idx !== count) movedFlag = true
+                  p[idx] = undefined
+                  p[count++] = p1
+                })
+                // 同数相邻叠加
+                if(count > 1) {
+                  let count1 = -1
+                  for(let i = 0; i < p.length; i++) {
+                    const curr = p[i]
+                    if(!curr) continue
+                    count1++
+                    p[i] = undefined
+                    if(curr === p[i+1]) {
+                      if(!movedFlag) movedFlag = true
+                      p[count1] = curr * 2
+                      p[i+1] = undefined
+                      i++
+                    } else {
+                      p[count1] = curr
+                    }
+                  }
+                }
+              })
+              if(!this.started) {
+                this.started = true
+              } else {
+                if(!movedFlag) {
+                  if(!this.checkMovable(this.data)) {
+                    this.failedFlag = true
+                    reject('Game Over')
+                    alert('Game Over')
+                  } else {
+                    resolve()
+                  }
+                  return
+                }
+              }
+
+              const { rowIdx, colIdx } = this.createBlock(tmpData)
+              let [rowIdx1, colIdx1] = [rowIdx, colIdx]
+              if(!direction) {
+                tmpData = this.reserveRow(tmpData);
+                colIdx1 = 3 - colIdx1
+              }
+              if(['up','down'].includes(type)) {
+                tmpData = this.transMatrix(tmpData)
+                ;[colIdx1, rowIdx1] = [rowIdx1, colIdx1]
+              }
+              if(flag) {
+                this.data = this.copyData(tmpData)
+              }
+              this.appearTransition(rowIdx1, colIdx1)
+                .then(_ => resolve())
+                .catch(err => reject(err.message || err))
+            })
+          },
+          // 生成块
+          createBlock(arr) {
+            // debugger
+            const w = [1,4,10,100], res = []
+            let start = 0, end = 0
+            arr.forEach((row,rowIdx) => {
+              row.forEach((cell,colIdx) => {
+                if(cell) return
+                end = start + w[colIdx]
+                res.push({
+                  rowIdx, colIdx,
+                  range: [start, end-1]
+                })
+                start = end
+              })
+            })
+            if(end === 0) return { err: 'Game Over' }
+            const randomIdx = Math.floor(Math.random() * end)
+            const target = res.find(p => p.range[0] <= randomIdx && randomIdx <= p.range[1])
+            return target ? {
+              rowIdx: target.rowIdx,
+              colIdx: target.colIdx
+            } : {
+              err: 'Game Over'
+            }
+          },
+          // 二维矩阵转置
+          transMatrix(arr) {
+            let res = []
+            for(let i = 0; i < arr.length; i++) {
+              for(let j = 0; j < arr[i].length; j++) {
+                if(!res[j]) res[j] = []
+                res[j][i] = arr[i][j]
+              }
+            }
+            return res
+          },
+          reserveRow(arr) {
+            return arr.reduce((prev,curr) => {
+              prev.push(curr.slice().reverse())
+              return prev
+            }, [])
+          },
+          copyData(arr) {
+            return arr.map(p => {
+              return p.map(p1 => p1)
+            })
+          },
+          getBlockBg(value) {
+            return this.colors[
+              value ? Math.log2(value) : 0
+            ] ?? this.colors.at(-1)
+          },
+          // 出现特效
+          appearTransition(rowIdx,colIdx) {
+            return new Promise((resolve,reject) => {
+              this.appear = [rowIdx,colIdx]
+              this.data[rowIdx][colIdx] = 2
+              setTimeout(() => {
+                this.appear = [-1,-1]
+                resolve()
+              }, 150)
+            })
+          },
+          checkFullPanel(arr) {
+            return arr.every(p => p.every(Boolean))
+          },
+          checkMovable(arr) {
+            return !this.checkFullPanel(arr)
+              || arr.some(p => p.some((p1,idx) => p1 === p[idx+1]))
+              || this.transMatrix(arr).some(p => p.some((p1,idx) => p1 === p[idx+1]))
+          }
+        }
+      };
+      const app = Vue.createApp(App);
+      app.mount("#app");
+    </script>
+    <style>
+      @keyframes testFrame {
+        from {opacity: 0;}
+        to {opacity: 1;}
+      }
+      .appear {
+        animation-name: testFrame;
+        animation-duration: 0.15s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: unset;
+      }
+      html,body {margin:0}
+      #app {
+        height: calc(100vh - 40px);
+        max-width: 750px;
+        margin: 0 auto;
+        padding: 20px;
+        box-shadow: 0 0 4px 2px rgb(0,0,0,.1);
+      }
+      .panel-wrap {
+        text-align: center;
+      }
+      #panel {
+        display: inline-block;
+        padding: 10px;
+        margin-bottom: 20px;
+        box-shadow: 0 0 4px 2px rgb(255,0,0,.1);
+        border-radius: 8px;
+        background-color: #d5fffe;
+      }
+      #opt {
+        text-align: center;
+      }
+      #opt>button {
+        font-size: 24px;
+        width: 50px;
+        padding: 6px;
+        margin: 6px;
+      }
+      #panel>div {
+        display: flex;
+      }
+      .cell {
+        width: 80px;
+        height: 80px;
+        margin: 8px;
+        color: #fff;
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 80px;
+        text-align: center;
+        box-shadow: 4px 4px 0px 0px rgb(0, 0, 255, .1);
+        background-color: #cef4f5;
+      }
+      .cell-block {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </body>
+</html>

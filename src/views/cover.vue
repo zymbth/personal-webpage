@@ -250,7 +250,7 @@ function grayDegree(r,g,b) {
           <span class="intro-typed"></span>
         </h1>
         <div class="infos">
-          <p @click="copyToClipBoard('ymzhaobth@foxmail.com')">ymzhaobth@foxmail.com</p>
+          <span @click="copyToClipBoard('ymzhaobth@foxmail.com')">ymzhaobth@foxmail.com</span>
         </div>
         <div class="links">
           <a class="link color-yellow" href="/about" target="_blank">About me</a>
@@ -314,7 +314,7 @@ function grayDegree(r,g,b) {
   .infos {
     line-height: 2em;
     margin-bottom: 20px;
-    >p {cursor:copy}
+    >span {cursor:copy}
   }
 }
 

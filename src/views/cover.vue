@@ -5,128 +5,19 @@ import { copyToClipBoard } from '@/utils/common-methods.js'
 import AvatarImg from '@/assets/img/p3_1_3.png'
 import FooterComp from '@/components/footer.vue'
 import { Stars } from '@/utils/stars.js'
-
-const canvasEl = ref(), // canvas容器
-  ctx = ref({}), // ctx
-  dots = ref([]); // 粒子
-
-const scale = ref(1); // 放大尺寸
-const precision = ref(4); // 精度
-const radius = ref(0.5); // 粒子半径
+import { imageParticle } from '@/utils/img-particle'
 
 onMounted(() => {
-  Stars.init('stars', 1000)
-
   new Typed('.intro-typed', {
     strings: ['前端开发工程师', 'Java开发工程师', '全栈开发工程师'],
     typeSpeed: 100,
     backSpeed: 60,
     loop: true
   })
-
-  ctx.value = canvasEl.value.getContext("2d");
-  const img = document.createElement("img");
-  img.src = AvatarImg
-  img.onload = () => {
-    particlizeImage(img);
-  };
+  
+  Stars.init('stars', 1000)
+  imageParticle('avatar', AvatarImg)
 })
-
-// 粒子化图片
-function particlizeImage(img) {
-  canvasEl.value.width = img.width * scale.value;
-  canvasEl.value.height = img.height * scale.value;
-  ctx.value.drawImage(img, 0, 0, img.width, img.height); // 参数 2、3：img 在 canvas 中的坐标
-  const imgData = ctx.value.getImageData(0, 0, img.width, img.height); //复制画布上指定矩形的像素数据，RGBA的一维数组数据
-  ctx.value.clearRect(0, 0, canvasEl.value.width, canvasEl.value.height);
-
-  getDots(imgData, +precision.value, +radius.value, +scale.value);
-  drawDots();
-}
-// 清空画布，清空粒子
-function clearCanvas() {
-  dots.value = [];
-  canvasEl.value.width = canvasEl.value.width;
-}
-// 圆点构造函数
-const Dot = function (centerX, centerY, radius, fillStyle) {
-  this.x = centerX;
-  this.y = centerY;
-  this.radius = radius;
-  this.fillStyle = fillStyle;
-};
-Dot.prototype = {
-  paint: function () {
-    ctx.value.save();
-    ctx.value.beginPath();
-    ctx.value.fillStyle = this.fillStyle;
-
-    // arc(x, y, r, startAngle, endAngle, anticlockwise) 以x,y为圆心，以r为半径，从startAngle弧度开始到endAngle弧度结束，anticlosewise是布尔值，true表示逆时针，false表示顺时针，默认是顺时针
-    ctx.value.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
-    ctx.value.fill();
-
-    // ctx.value.fillRect(this.x, this.y, this.radius, this.radius)
-    ctx.value.restore();
-  },
-};
-/**
- * 从图像像素数据中获取粒子
- *
- * @param {Array} imgData 图像像素数据
- * @param {number} precision 精度
- * @param {number} radius 半径
- * @param {number} scale 缩放等级
- */
- function getDots(imgData, precision = 4, radius = 2, scale) {
-  for (var x = 0; x < imgData.width; x += precision) {
-    for (var y = 0; y < imgData.height; y += precision) {
-      // y为行，x为列  每个像素点由RGBA四个数据组成
-      var i = (y * imgData.width + x) * 4;
-      if (
-        !(
-          imgData.data[i] >= 200 &&
-          imgData.data[i + 1] >= 200 &&
-          imgData.data[i + 2] >= 200
-        ) &&
-        imgData.data[i + 3] >= 128
-      ) {
-        const g = grayDegree(imgData.data[i],imgData.data[i+1],imgData.data[i+2])
-        const opacity = g > 150 ? 1 : (0.2 + 0.8 * (g/150).toFixed(2))
-        // console.log(opacity)
-        // 有颜色值就渲染
-        var dot = new Dot(
-          x * scale,
-          y * scale,
-          radius,
-          `rgba(
-            ${imgData.data[i]},
-            ${imgData.data[i + 1]},
-            ${imgData.data[i + 2]},
-            ${opacity || imgData.data[i + 3]}
-          )`
-        );
-        dots.value.push(dot);
-      }
-    }
-  }
-}
-// 添加粒子到画布上
-function drawDots() {
-  dots.value.forEach(function (item) {
-    item.paint();
-  });
-}
-
-/**
- * 计算rgb颜色深浅程度
- * @param {number} r 
- * @param {number} g 
- * @param {number} b 
- * @returns {number} g 值越小，颜色越深
- */
-function grayDegree(r,g,b) {
-  return r * 0.299 + g * 0.587 + b * 0.114
-}
 
 // TODO: https://ai.baidu.com/tech/imageprocess/selfie_anime
 </script>
@@ -134,7 +25,7 @@ function grayDegree(r,g,b) {
 <template>
   <div class="wrapper">
     <canvas id="stars"></canvas>
-    <canvas id="avatar" ref="canvasEl"></canvas>
+    <canvas id="avatar"></canvas>
     <div class="cover-content">
       <main>
         <h1>

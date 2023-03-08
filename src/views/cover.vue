@@ -1,20 +1,13 @@
 <script setup>
-import { ref, onMounted } from 'vue'
-import Typed from 'typed.js'
+import { onMounted } from 'vue'
 import { copyToClipBoard } from '@/utils/common-methods.js'
 import AvatarImg from '@/assets/img/p3_1_3.png'
 import FooterComp from '@/components/footer.vue'
+import TypedCareer from '../components/typed-career.vue'
 import { Stars } from '@/utils/stars.js'
 import { imageParticle } from '@/utils/img-particle'
 
 onMounted(() => {
-  new Typed('.intro-typed', {
-    strings: ['前端开发工程师', 'Java开发工程师', '全栈开发工程师'],
-    typeSpeed: 100,
-    backSpeed: 60,
-    loop: true
-  })
-  
   Stars.init('stars', 1000)
   imageParticle('avatar', AvatarImg)
 })
@@ -29,7 +22,7 @@ onMounted(() => {
     <div class="cover-content">
       <main>
         <h1>
-          <span class="intro-typed"></span>
+          <TypedCareer />
         </h1>
         <div class="infos">
           <span @click="copyToClipBoard('ymzhaobth@foxmail.com')">ymzhaobth@foxmail.com</span>

@@ -167,15 +167,18 @@ const careers = [{
     margin: 50px auto 20px;
     width: 150px;
     border-radius: 50%;
+    box-shadow: 0 0 4px 2px #00000033;
   }
   .my-name {
-    font-size: 30px;
+    font-size: 36px;
     color: #fff;
     line-height: 2em;
     display: block;
   }
-  &:deep .intro-typed {
+  &:deep .intro-typed,
+  &:deep .typed-cursor {
     color:rgb(255, 187, 0);
+    text-shadow: 0px 0px 1px #00000066;
   }
 }
 .infos {

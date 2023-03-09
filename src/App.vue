@@ -21,10 +21,11 @@ body {
   /* overflow: auto; */
 }
 .page-title {
-	margin: 0 auto 0.5rem;
+	margin: 1rem auto;
 	text-align: center;
 	font-size: 3rem;
 	font-weight: bold;
+  line-height: 1.5em;
 	text-transform: uppercase;
 }
 .page-desc {

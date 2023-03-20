@@ -2,6 +2,7 @@
 import { ref, reactive, onMounted } from 'vue';
 import { getObjectByTmpl } from '@/utils/common-methods'
 import ObserverWrap from './comp/observer-wrap.vue'
+import FooterComp from '@/components/footer.vue'
 import TypedCareer from '@/components/typed-career.vue'
 import axios from 'axios'
 
@@ -125,6 +126,7 @@ const careers = [{
           <ObserverWrap v-for="item in careers" :data="item"></ObserverWrap>
         </div>
       </div>
+      <FooterComp class="footer" />
     </div>
   </div>
 </template>
@@ -246,6 +248,9 @@ const careers = [{
   overflow-x: hidden;
 }
 .time-line-wrap:deep .career-block:last-child .time-line {display:none}
+.footer {
+  margin-bottom: 16px;
+}
 
 @media screen and (max-width:750px) {
   .cover {

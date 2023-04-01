@@ -39,7 +39,7 @@ onMounted(() => {
           <a class="link" href="https://blog.csdn.net/ymzhaobth" target="_blank">CSDN</a>
         </div>
       </main>
-      <FooterComp class="footer" />
+      <FooterComp />
     </div>
   </div>
 </template>
@@ -88,13 +88,7 @@ onMounted(() => {
   .footer {
     position: absolute;
     bottom: 16px;
-    text-align: center;
-    width: 100%;
     opacity: 0.3;
-    // color: rgba(255,255,255,0.2);
-    // a {
-    //   color: rgba(var(--link-color), 0.3);
-    // }
   }
   h1 {margin-bottom:50px;user-select:none}
   // .intro-typed {user-select:none}

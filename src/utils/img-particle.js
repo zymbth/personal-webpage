@@ -48,10 +48,11 @@ export const imageParticle = (canvasId, img) => {
           ) &&
           imgData.data[i + 3] >= 128
         ) {
-          const g = grayDegree(imgData.data[i],imgData.data[i+1],imgData.data[i+2])
-          const opacity = g > 150 ? 1 : (0.2 + 0.8 * (g/150).toFixed(2))
+          // const g = grayDegree(imgData.data[i],imgData.data[i+1],imgData.data[i+2])
+          // const opacity = g > 150 ? 1 : (0.2 + 0.8 * (g/150).toFixed(2))
           // console.log(opacity)
           // 有颜色值就渲染
+          // ${opacity || imgData.data[i + 3]}
           var dot = new Dot(
             ctx,
             x * scale,
@@ -60,8 +61,7 @@ export const imageParticle = (canvasId, img) => {
             `rgba(
               ${imgData.data[i]},
               ${imgData.data[i + 1]},
-              ${imgData.data[i + 2]},
-              ${opacity || imgData.data[i + 3]}
+              ${imgData.data[i + 2]}
             )`
           );
           dots.push(dot);

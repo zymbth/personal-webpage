@@ -355,7 +355,7 @@ const careers = [{
   }
 }
 .careers-block {
-  overflow: visible;
+  overflow: hidden;
 }
 .time-line-wrap:deep .career-block:last-child .time-line {display:none}
 .footer {

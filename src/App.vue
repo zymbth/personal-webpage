@@ -9,6 +9,7 @@
 body {
   margin: 0;
   width: 100%;
+  overflow: hidden;
 }
 #app {
   -webkit-font-smoothing: antialiased;

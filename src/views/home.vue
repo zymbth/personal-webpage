@@ -29,14 +29,18 @@ onMounted(() => {
         </div>
         <div class="links">
           <a class="link color-yellow" href="/about">About me</a>
-          <a class="link color-green" href="javascript:void;" target="_blank">Tell me a secret</a>
+          <a class="link color-green" href="https://zymbth.github.io/ymzhao-blogs/" target="_blank"
+            >Explore my blog</a
+          >
+          <!-- <a class="link color-green" href="javascript:void;" target="_blank">Tell me a secret</a> -->
           <a class="link color-red" href="javascript:void;" target="_blank">View my resume</a>
         </div>
         <div class="footer-links color-yellow">
           <a class="link" href="https://github.com/zymbth" target="_blank">GitHub</a>
-          <a class="link" href="https://twitter.com/z_ymin" target="_blank">Twitter</a>
           <a class="link" href="https://codepen.io/zymbth" target="_blank">Codepen</a>
+          <a class="link" href="https://zymbth.github.io/ymzhao-blogs/" target="_blank">Blog</a>
           <a class="link" href="https://blog.csdn.net/ymzhaobth" target="_blank">CSDN</a>
+          <a class="link" href="https://twitter.com/z_ymin" target="_blank">Twitter</a>
         </div>
       </main>
       <FooterComp />
@@ -80,28 +84,40 @@ onMounted(() => {
     position: absolute;
     top: 168px;
     right: 0;
-    bottom: 77px;
+    bottom: 50px;
     left: 0;
     width: 100%;
     color: #fff;
   }
   .footer {
     position: absolute;
-    bottom: 16px;
+    bottom: 0;
     opacity: 0.3;
+    font-size: 12px;
   }
-  h1 {margin-bottom:50px;user-select:none}
+  h1 {
+    margin-bottom: 50px;
+    user-select: none;
+  }
   // .intro-typed {user-select:none}
   .infos {
     line-height: 2em;
     margin-bottom: 20px;
-    >span {cursor:copy}
+    > span {
+      cursor: copy;
+    }
   }
 }
 
-.color-yellow {--color:#e0a458}
-.color-green {--color:#419d78}
-.color-red {--color:#d9594c}
+.color-yellow {
+  --color: #e0a458;
+}
+.color-green {
+  --color: #419d78;
+}
+.color-red {
+  --color: #d9594c;
+}
 .link {
   display: inline-block;
   position: relative;
@@ -113,7 +129,9 @@ onMounted(() => {
     font-weight: 700;
     color: var(--color);
 
-    &:not(:last-child) {margin-right:36px}
+    &:not(:last-child) {
+      margin-right: 36px;
+    }
     &::before {
       position: absolute;
       left: 0;
@@ -123,10 +141,12 @@ onMounted(() => {
       content: ' ';
       z-index: -1;
       display: block;
-      transition: all .7s cubic-bezier(0.19,1,0.22,1) 0s;
+      transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1) 0s;
       background-color: var(--color);
     }
-    &:hover::before {width:100%}
+    &:hover::before {
+      width: 100%;
+    }
   }
 }
 .footer-links {
@@ -139,20 +159,24 @@ onMounted(() => {
     line-height: 21px;
     color: #aaa;
 
-    &:not(:last-child) {margin-right:20px}
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
     &::before {
       position: absolute;
       left: 0;
       bottom: 2px;
       right: 0;
       height: 7px;
-      background-color: rgba(255,255,255,.07);
+      background-color: rgba(255, 255, 255, 0.07);
       content: ' ';
       z-index: -1;
       display: block;
-      transition: all .7s cubic-bezier(0.19,1,0.22,1) 0s;
+      transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1) 0s;
     }
-    &:hover {color: var(--color);}
+    &:hover {
+      color: var(--color);
+    }
     &:hover::before {
       bottom: -3.5px;
       height: 2px;

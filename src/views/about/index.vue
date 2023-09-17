@@ -1,12 +1,32 @@
 <script setup>
+import { ref, onMounted, onBeforeUnmount, provide } from 'vue'
 import FooterComp from '@/components/footer.vue'
 import SkillsComp from './comp/skills.vue'
 import CareerComp from './comp/career.vue'
 import CoverComp from './comp/cover.vue'
+
+const wrapInnerRef = ref()
+const scrollTop = ref(0)
+provide('scrollTop', scrollTop)
+
+let coverEl
+onMounted(() => {
+  coverEl = document.querySelector('.cover')
+  console.log('onMounted')
+  wrapInnerRef.value.addEventListener('scroll', handleScroll)
+})
+
+onBeforeUnmount(() => {
+  wrapInnerRef.value.removeEventListener('scroll', handleScroll)
+})
+
+function handleScroll(event) {
+  scrollTop.value = coverEl.getBoundingClientRect()?.top
+}
 </script>
 <template>
   <div class="no-scroll-bar">
-    <div class="wrap-inner">
+    <div class="wrap-inner" ref="wrapInnerRef">
       <!-- 封面 -->
       <CoverComp class="cover" />
       <!-- skills -->

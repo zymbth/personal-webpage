@@ -64,3 +64,45 @@ export function getObjectArrByTmpl(tmpl, arr) {
   return myTypeof(arr) === 'array' && arr.length
     ? arr.map(p => getObjectByTmpl(tmpl, p)) : []
 }
+
+/**
+ * 节流函数
+ * @param {function} fn 执行函数
+ * @param {number} interval 间隔时间，单位：ms
+ * @param {object} _this context
+ * @return {function} throttle func
+ * @example 
+ * const count = () => { console.log('counted') }
+ * window.addEventListener('resize', throttle(count, 500))
+ */
+export function throttle(fn, interval = 300, _this) {
+  let prev = + new Date() // 开始时间 ms
+  return function(...args) {
+    let curr = + new Date() // 当前时间 ms
+    if(curr - prev > interval) { // 超出间隔，执行
+      prev = curr
+      _this ? fn.call(_this, ...args) : fn(...args)
+    }
+  }
+}
+
+/**
+ * 防抖函数，去弹跳
+ * @param {function} fn 执行函数
+ * @param {number} delay 延时，单位：ms
+ * @param {object} _this context
+ * @return {function} debounce func
+ * @example 
+ * const count = () => { console.log('counted') }
+ * window.addEventListener('resize', debounce(count, 500))
+ */
+export function debounce(fn, delay = 300, _this) {
+  let timer // 计时器
+  return function(...args) {
+    timer && clearTimeout(timer) // 清除delay延时内存在的计时器
+    // 延时执行fn
+    timer = setTimeout(() => {
+      _this ? fn.call(_this, ...args) : fn(...args)
+    }, delay)
+  }
+}

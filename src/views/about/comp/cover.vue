@@ -1,6 +1,10 @@
 <script setup>
+import { computed, inject } from 'vue'
 import TypedCareer from '@/components/typed-career.vue'
 import YiyanComp from './yiyan.vue'
+
+const scrollTop = inject('scrollTop')
+const bgPosi = computed(() => -Math.floor(scrollTop.value / 2) + 'px')
 </script>
 <template>
   <!-- 封面 -->
@@ -41,18 +45,19 @@ import YiyanComp from './yiyan.vue'
 <style lang="scss" scoped>
 @media screen and (max-width: 750px) {
   .cover {
-    min-height: 100vh;
-    height: auto;
+    // min-height: 100vh;
+    // height: auto;
     .intro {
       height: auto;
     }
   }
 }
 .cover {
-  height: clamp(400px, 100vh, 1000px);
+  min-height: clamp(400px, 100vh, 1000px);
   background-image: url(../../../assets/img/climbing-bg.jpg);
   background-size: cover;
-  background-position: 50% 0%;
+  background-position-x: 50%;
+  background-position-y: v-bind(bgPosi);
   position: relative;
 }
 .intro {
@@ -64,11 +69,11 @@ import YiyanComp from './yiyan.vue'
   padding: 10vh 10vw;
 }
 .avatar {
-  width: 360px;
+  width: 300px;
   height: 360px;
   text-align: center;
-  border: 4px solid #ccc;
-  box-shadow: 0 0 4px 2px #00000033;
+  // border: 4px solid #ccc;
+  // box-shadow: 0 0 4px 2px #00000033;
 
   > img {
     display: block;
@@ -90,7 +95,7 @@ import YiyanComp from './yiyan.vue'
   }
 }
 .infos {
-  width: 600px;
+  width: 550px;
   color: white;
   text-shadow: 0px 0px 2px #00000066;
   .career-goal {

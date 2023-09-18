@@ -13,8 +13,10 @@ const bgPosi = computed(() => -Math.floor(scrollTop.value / 2) + 'px')
     <div class="intro">
       <div class="avatar">
         <img src="/icon.jpg" />
-        <span class="my-name">赵跃旻</span>
-        <TypedCareer />
+        <div class="profession">
+          <span class="my-name">赵跃旻</span>
+          <TypedCareer />
+        </div>
       </div>
       <div class="infos">
         <h1>Career Goal</h1>
@@ -43,15 +45,6 @@ const bgPosi = computed(() => -Math.floor(scrollTop.value / 2) + 'px')
   </div>
 </template>
 <style lang="scss" scoped>
-@media screen and (max-width: 750px) {
-  .cover {
-    // min-height: 100vh;
-    // height: auto;
-    .intro {
-      height: auto;
-    }
-  }
-}
 .cover {
   min-height: clamp(400px, 100vh, 1000px);
   background-image: url(../../../assets/img/climbing-bg.jpg);
@@ -59,18 +52,19 @@ const bgPosi = computed(() => -Math.floor(scrollTop.value / 2) + 'px')
   background-position-x: 50%;
   background-position-y: v-bind(bgPosi);
   position: relative;
+  overflow: hidden;
 }
 .intro {
   display: flex;
   justify-content: space-evenly;
-  flex-wrap: wrap;
+  // flex-wrap: wrap;
   align-content: center;
+  align-items: center;
   height: 80vh;
   padding: 10vh 10vw;
 }
 .avatar {
   width: 300px;
-  height: 360px;
   text-align: center;
   // border: 4px solid #ccc;
   // box-shadow: 0 0 4px 2px #00000033;
@@ -91,13 +85,13 @@ const bgPosi = computed(() => -Math.floor(scrollTop.value / 2) + 'px')
   &:deep .intro-typed,
   &:deep .typed-cursor {
     color: rgb(255, 187, 0);
-    text-shadow: 0px 0px 1px #00000066;
+    text-shadow: 0px 0px 1px #000000;
   }
 }
 .infos {
   width: 550px;
   color: white;
-  text-shadow: 0px 0px 2px #00000066;
+  text-shadow: 0px 0px 2px #000000;
   .career-goal {
     color: #f4f4f4;
     font-size: 14px;
@@ -119,6 +113,23 @@ const bgPosi = computed(() => -Math.floor(scrollTop.value / 2) + 'px')
     > span {
       display: inline-block;
       width: calc(100% - 150px);
+    }
+  }
+}
+@media screen and (max-width: 920px) {
+  .cover {
+    // min-height: 100vh;
+    // height: auto;
+    .intro {
+      height: auto;
+      flex-direction: column;
+    }
+    .avatar {
+      display: flex;
+      align-items: center;
+    }
+    .profession {
+      width: 180px;
     }
   }
 }

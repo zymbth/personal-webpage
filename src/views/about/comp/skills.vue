@@ -1,10 +1,14 @@
 <script setup>
 import { ref, onMounted } from 'vue'
+import useHandleResize from '@/use/useHandleResize'
 
 const skillsChart = ref()
+let myChart
+
+useHandleResize(() => myChart.resize?.())
 
 onMounted(() => {
-  let myChart = echarts.init(skillsChart.value)
+  myChart = echarts.init(skillsChart.value)
   myChart.setOption({
     tooltip: {
       trigger: 'axis',
@@ -90,13 +94,6 @@ onMounted(() => {
   </div>
 </template>
 <style lang="scss" scoped>
-@media screen and (max-width:750px) {
-  .skills-container {
-    flex-wrap: wrap;
-    .skills-list, .skills-chart {width:88vw}
-  }
-}
-
 .skills-block {
   background-color: #fbfbfb;
 }
@@ -106,24 +103,35 @@ onMounted(() => {
   justify-content: space-evenly;
   .skills-list {
     width: 46%;
-    >span {
+    > span {
       display: block;
       position: relative;
       line-height: 1.5em;
       padding-left: 1.2em;
     }
-    >span::before {
+    > span::before {
       content: '>';
       position: absolute;
       top: 0;
       left: 0;
       // transform: translateY(-50%);
     }
-    >span:not(:last-child) {margin-bottom:10px}
+    > span:not(:last-child) {
+      margin-bottom: 10px;
+    }
   }
   .skills-chart {
     width: 46%;
-    height:400px;
+    height: 400px;
+  }
+}
+@media screen and (max-width: 920px) {
+  .skills-container {
+    flex-wrap: wrap;
+    .skills-list,
+    .skills-chart {
+      width: 88vw;
+    }
   }
 }
 </style>

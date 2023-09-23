@@ -58,11 +58,7 @@ export const imageParticle = (canvasId, img) => {
             x * scale,
             y * scale,
             radius,
-            `rgba(
-              ${imgData.data[i]},
-              ${imgData.data[i + 1]},
-              ${imgData.data[i + 2]}
-            )`
+            `rgba(${imgData.data[i]},${imgData.data[i + 1]},${imgData.data[i + 2]})`
           );
           dots.push(dot);
         }

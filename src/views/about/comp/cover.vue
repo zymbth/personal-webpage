@@ -47,7 +47,7 @@ const bgPosi = computed(() => -Math.floor(scrollTop.value / 2) + 'px')
 <style lang="scss" scoped>
 .cover {
   min-height: clamp(400px, 100vh, 1000px);
-  background-image: url(../../../assets/img/climbing-bg.jpg);
+  background-image: url(../../../assets/img/preload/climbing-bg.jpg);
   background-size: cover;
   background-position-x: 50%;
   background-position-y: v-bind(bgPosi);

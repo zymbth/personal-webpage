@@ -1,11 +1,11 @@
 <script setup>
 import { onMounted } from 'vue'
 import { copyToClipBoard } from '@/utils/common-methods.js'
-import AvatarImg from '@/assets/img/p3_1_3.png'
+import AvatarImg from '@/assets/img/preload/p3_1_3.png'
 import FooterComp from '@/components/footer.vue'
-import TypedCareer from '../components/typed-career.vue'
-import { Stars } from '@/utils/stars.js'
-import { imageParticle } from '@/utils/img-particle'
+import TypedCareer from '@/components/typed-career.vue'
+import { Stars } from './stars.js'
+import { imageParticle } from './img-particle-static'
 
 onMounted(() => {
   Stars.init('stars', 1000)

@@ -1,8 +1,7 @@
-<script setup>
-</script>
-  
+<script setup></script>
+
 <template>
-  <router-view/>
+  <router-view />
 </template>
 
 <style>
@@ -22,16 +21,16 @@ body {
   /* overflow: auto; */
 }
 .page-title {
-	margin: 1rem auto;
-	text-align: center;
-	font-size: 3rem;
-	font-weight: bold;
+  margin: 1rem auto;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
   line-height: 1.5em;
-	text-transform: uppercase;
+  text-transform: uppercase;
 }
 .page-desc {
-	margin: 0 auto 1rem;
-	text-align: center;
-	color: #4e4e4e;
+  margin: 0 auto 1rem;
+  text-align: center;
+  color: #4e4e4e;
 }
 </style>

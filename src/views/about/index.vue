@@ -2,7 +2,7 @@
 import { ref, onMounted, onBeforeUnmount, provide } from 'vue'
 import FooterComp from '@/components/footer.vue'
 import SkillsComp from './comp/skills.vue'
-import CareerComp from './comp/career.vue'
+import CareerComp from './career/index.vue'
 import CoverComp from './comp/cover.vue'
 
 const wrapInnerRef = ref()

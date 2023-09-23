@@ -1,10 +1,16 @@
 <script setup>
 import ObserverWrap from './observer-wrap.vue'
+import RevirLogo from '@/assets/img/career/REVIR.png'
+import JundaxLogo from '@/assets/img/career/jundax.jpg'
+import SIIDLogo from '@/assets/img/career/SIID.png'
+import BTHLogo from '@/assets/img/career/BTH.svg'
+import USTBLogo from '@/assets/img/career/USTB.webp'
 
 const careers = [
   {
     time: '2021/3/28',
-    title: '深圳溪砾科技有限公司',
+    title: '溪砾科技（深圳）有限公司',
+    logo: RevirLogo,
     posi: '前端负责人',
     contents: [
       '灵活选用前端技术支持公司医学检测出报、办公ERP系统、AI辅助药物研发等核心业务。',
@@ -15,6 +21,7 @@ const careers = [
   {
     time: '2019/7/13',
     title: '扶沃(深圳)科技有限公司',
+    logo: JundaxLogo,
     posi: '前端工程师',
     contents: [
       '领导的信任让我意识到对工作的责任感的必要性。',
@@ -25,6 +32,7 @@ const careers = [
   {
     time: '2018/8/1',
     title: '深圳创新与设计研究院',
+    logo: SIIDLogo,
     posi: '开发实习生',
     contents: [
       '同事的指引、主任的指导让初入职的彷徨很快消散。',
@@ -34,6 +42,7 @@ const careers = [
   {
     time: '2015/9/1',
     title: '瑞典布莱津理工大学',
+    logo: BTHLogo,
     posi: '研究生',
     contents: [
       '浓厚活跃的学术氛围下，与来自世界各地的同学一起学习，不断的思维碰撞激发了我不断前进。理论与实践的教学方式让我体会到知识的真正意义。',
@@ -42,6 +51,7 @@ const careers = [
   {
     time: '2011/9/1',
     title: '北京科技大学',
+    logo: USTBLogo,
     posi: '本科生',
     contents: [
       '青葱少年离开家乡，进入千里之外的北科大。度过四年彷徨又充实的大学时光，在这里，接触各种新的知识，并拓宽自己的视野，结交了许多新朋友，让我有机会去做自己想做的事情。母校“求实鼎新”的校训将永远铭记。',

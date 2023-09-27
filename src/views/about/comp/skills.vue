@@ -16,26 +16,32 @@ onMounted(() => {
         type: 'shadow',
       },
       formatter: function (params, ticket, callback) {
-        return params[0].value[3]
+        const skillItems = params[0].value[3].split('\n')
+        // 换行容器
+        return `<div class="chart-skill">${
+          skillItems.map(item => `<span>${item}</span>`).join('')
+        }</div>`
       },
+      // 定位
       position: function (point, params, dom, rect, size) {
-        var pX =
+        const pX =
           size.contentSize[0] + point[0] > size.viewSize[0]
             ? size.viewSize[0] - size.contentSize[0]
             : point[0]
-        var pY = point[1] - size.contentSize[1] / 2
+        const pY = point[1] - size.contentSize[1] / 2
         return [pX, pY]
       },
     },
     dataset: {
       source: [
         ['score', '%', 'skill', 'description'],
-        [75, 75, '数据库', '熟练使用MySQL, PostgreSQL数据库'],
-        [40, 40, 'Python', '掌握基本语法，编写过RESTful接口、推荐算法'],
-        [88, 88, 'Java', '擅长SpringBoot+SpringMVC+MybatisPlus框架'],
-        [75, 75, 'CSS', '前端基础技能'],
-        [85, 85, 'HTML', '前端基础技能'],
-        [90, 90, 'JavaScript', '拥有五年实战经验，js基础扎实'],
+        [75, 75, '数据库', '协同设计过供应链系统的数据库结构\n能熟练使用MySQL, PostgreSQL数据库'],
+        [40, 40, 'Python', '掌握基本语法，为生产项目编写过RESTful接口、推荐算法'],
+        [80, 80, 'Git', '熟练使用Git管理代码，进行团队协作开发、项目版本控制。\n深刻理解Git工作流，有丰富的实际使用经验'],
+        [86, 86, 'Java', '擅长 SpringBoot + SpringMVC + MybatisPlus 框架'],
+        [75, 75, 'CSS', '熟练的CSS技能者，熟悉CSS3的新特性，在现代布局、移动端兼容等方面具备丰富的经验和实践能力。\n能熟练得实现响应式、移动端优先的设计。\n熟悉CSS预处理器的使用，以提高CSS代码的可读性、可维护性和可重用性。'],
+        [85, 85, 'HTML', '具备扎实的HTML技能，熟悉各种HTML标签、属性和语法。'],
+        [90, 90, 'JavaScript', '拥有五年实战经验，具备丰富的js技能。\n精通vue全家桶，拥有Angular框架实战经验，了解React基本语法。\n具备良好的代码风格，在前端工程化上具备丰富的经验和实践能力。'],
       ],
     },
     grid: { containLabel: true },
@@ -69,7 +75,10 @@ onMounted(() => {
   <div class="skills-block">
     <h5 class="page-title">Professional Skills</h5>
     <div class="skills-container">
-      <div class="skills-list">
+      <div class="skills-essential">
+        <div class="skills-chart" ref="skillsChart"></div>
+      </div>
+      <div class="skills-others">
         <span
           >熟练掌握HTML5/CSS3/ES6，擅长移动/桌面端网页开发、H5混合开发、小程序、django模板等多种应用场景</span
         >
@@ -89,47 +98,66 @@ onMounted(() => {
           python（基础）</span
         >
       </div>
-      <div class="skills-chart" ref="skillsChart"></div>
     </div>
   </div>
 </template>
 <style lang="scss" scoped>
+@mixin custom-li {
+  > span {
+    display: block;
+    position: relative;
+    line-height: 1.5em;
+    padding-left: 1.2em;
+  }
+  > span::before {
+    content: '>';
+    position: absolute;
+    top: 0;
+    left: 0;
+    // transform: translateY(-50%);
+  }
+  > span:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
 .skills-block {
   background-color: #fbfbfb;
 }
 .skills-container {
   display: flex;
   align-items: flex-start;
-  justify-content: space-evenly;
-  .skills-list {
-    width: 46%;
-    > span {
-      display: block;
-      position: relative;
-      line-height: 1.5em;
-      padding-left: 1.2em;
-    }
-    > span::before {
-      content: '>';
-      position: absolute;
-      top: 0;
-      left: 0;
-      // transform: translateY(-50%);
-    }
-    > span:not(:last-child) {
-      margin-bottom: 10px;
+  justify-content: center;
+  gap: 20px 20px;
+  overflow-x: hidden;
+  .skills-others {
+    @include custom-li;
+    width: 50%;
+  }
+  .skills-essential {
+    width: 50%;
+    .skills-chart {
+      width: 100%;
+      height: 400px;
     }
   }
-  .skills-chart {
-    width: 46%;
-    height: 400px;
+}
+.skills-chart:deep .chart-skill {
+  @include custom-li;
+  max-width: max(270px,25vw);
+  white-space: break-spaces;
+  > span {
+    line-height: 1.2em;
+    padding-left: 1em;
+  }
+  > span:not(:last-child) {
+    margin-bottom: 6px;
   }
 }
 @media screen and (max-width: 920px) {
   .skills-container {
     flex-wrap: wrap;
-    .skills-list,
-    .skills-chart {
+    .skills-others,
+    .skills-essential {
       width: 88vw;
     }
   }

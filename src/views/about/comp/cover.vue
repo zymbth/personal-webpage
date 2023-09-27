@@ -21,7 +21,7 @@ const bgPosi = computed(() => -Math.floor(scrollTop.value / 2) + 'px')
       <div class="infos">
         <h1>Career Goal</h1>
         <p class="career-goal">
-          不断地提升自身的前端技术能力，提高代码质量，学习最新的技术以适应不断变化的市场需求。
+          不断提升前端技术能力，提高代码质量，学习最新的技术以适应不断变化的市场需求。
           培养更加专业的前端开发技能，为网站提供更加出色的用户体验和设计。
           熟练掌握后端技术、数据库技术、web服务器技术，具备全面开发能力。
         </p>
@@ -91,7 +91,10 @@ const bgPosi = computed(() => -Math.floor(scrollTop.value / 2) + 'px')
 .infos {
   width: 550px;
   color: white;
-  text-shadow: 0px 0px 2px #000000;
+  text-shadow: 1px 1px 3px #000000;
+  > h1 {
+    text-shadow: 3px 3px 3px #0ea4eb;
+  }
   .career-goal {
     color: #f4f4f4;
     font-size: 14px;
@@ -120,6 +123,7 @@ const bgPosi = computed(() => -Math.floor(scrollTop.value / 2) + 'px')
   .cover {
     // min-height: 100vh;
     // height: auto;
+    background-position-x: 72%;
     .intro {
       height: auto;
       flex-direction: column;
@@ -131,6 +135,9 @@ const bgPosi = computed(() => -Math.floor(scrollTop.value / 2) + 'px')
     .profession {
       width: 180px;
     }
+  }
+  .infos {
+    width: 88vw;
   }
 }
 </style>

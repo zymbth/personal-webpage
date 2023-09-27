@@ -37,13 +37,6 @@ function handleScroll(event) {
   </div>
 </template>
 <style lang="scss" scoped>
-@media screen and (max-width: 750px) {
-  .skills-block,
-  .careers-block {
-    padding: 20px 20px 20px 0;
-  }
-}
-
 .no-scroll-bar {
   overflow: hidden;
   width: 100vw;
@@ -64,5 +57,12 @@ function handleScroll(event) {
 
 .footer {
   margin-bottom: 16px;
+}
+
+@media screen and (max-width: 750px) {
+  .skills-block,
+  .careers-block {
+    padding: 20px;
+  }
 }
 </style>

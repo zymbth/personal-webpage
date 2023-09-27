@@ -73,11 +73,11 @@ const fetchYiYan = () => {
 .yiyan {
   position: absolute;
   bottom: 20px;
-  right: 4px;
+  right: 20px;
   color: #fff;
+  // width: 36vw;
   min-width: 260px;
   max-width: 400px;
-  padding-right: 16px;
   >span {
     display: block;
     line-height: 1.4em;
@@ -95,8 +95,9 @@ const fetchYiYan = () => {
   .icon {
     display: none;
     position: absolute;
-    top: 0;
-    right: 0;
+    top: -6px;
+    right: -12px;
+    filter: drop-shadow(0px 0px 2px #0ea4eb);
     cursor: pointer;
   }
   .icon-loading {
@@ -112,6 +113,16 @@ const fetchYiYan = () => {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+@media screen and (max-width: 920px) {
+  .yiyan {
+    min-width: 36vw;
+    max-width: 70vw;
+    .icon {
+      top: -4px;
+      right: 0;
+    }
   }
 }
 </style>

@@ -12,7 +12,6 @@ provide('scrollTop', scrollTop)
 let coverEl
 onMounted(() => {
   coverEl = document.querySelector('.cover')
-  console.log('onMounted')
   wrapInnerRef.value.addEventListener('scroll', handleScroll)
 })
 

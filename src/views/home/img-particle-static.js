@@ -27,10 +27,10 @@ export const imageParticle = (canvasId) => {
     for(let dot of dotList) {
       dots.push(new Dot(
         ctx,
-        dot.x,
-        dot.y,
+        dot[0],
+        dot[1],
         radius,
-        dot.fillStyle
+        `rgba(${dot[2]},${dot[3]},${dot[4]})`
       ))
     }
   }

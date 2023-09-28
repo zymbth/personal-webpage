@@ -1,6 +1,5 @@
 <script setup>
 import { ref, reactive, onMounted } from 'vue'
-import axios from 'axios'
 import { getObjectByTmpl } from '@/utils/common-methods'
 
 const tmpl = {
@@ -20,14 +19,16 @@ onMounted(() => {
 const fetchYiYan = () => {
   if(loading.value) return
   loading.value = true
-  axios.get('https://v1.hitokoto.cn?c=d&c=i&c=k').then(res => {
-    Object.assign(yiyan, getObjectByTmpl(tmpl, {}))
-    setTimeout(() => {
-      Object.assign(yiyan, getObjectByTmpl(tmpl, res.data ?? {}))
-    }, 300)
-  }).finally(_ => {
-    loading.value = false
-  })
+  fetch('https://v1.hitokoto.cn?c=d&c=i&c=k')
+    .then(response => response.json())
+    .then(res => {
+      Object.assign(yiyan, getObjectByTmpl(tmpl, {}))
+      setTimeout(() => {
+        Object.assign(yiyan, getObjectByTmpl(tmpl, res ?? {}))
+      }, 300)
+    }).finally(_ => {
+      loading.value = false
+    })
 }
 </script>
 <template>

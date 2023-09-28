@@ -6,15 +6,17 @@ const props = defineProps({
   options: { type: Object, default: {} },
 })
 
-const wrapperEl = ref(),
+const wrapperRef = ref(),
   flag = ref(false)
 
 onMounted(() => {
 
   let observer = new IntersectionObserver(
     entries => {
-      // console.log('trigged', entries[0]?.isIntersecting, !flag.value && entries[0]?.isIntersecting)
-      if (!flag.value && entries[0]?.isIntersecting) flag.value = true
+      if (!flag.value && entries[0]?.isIntersecting) {
+        flag.value = true
+        observer.unobserve(wrapperRef.value)
+      }
     },
     {
       root: document,
@@ -22,7 +24,7 @@ onMounted(() => {
       threshold: 0,
     }
   )
-  observer.observe(wrapperEl.value)
+  observer.observe(wrapperRef.value)
 })
 </script>
 <template>
@@ -30,7 +32,7 @@ onMounted(() => {
     <div class="time-line" :style="{ height: flag ? '100%' : 0 }"></div>
     <div
       class="career-block-inner"
-      ref="wrapperEl"
+      ref="wrapperRef"
       :style="flag ? {} : { transform: 'translateX(100%)', opacity: 0 }">
       <span class="career-date">{{ data.time }}</span>
       <div class="career-title">

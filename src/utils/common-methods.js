@@ -106,3 +106,13 @@ export function debounce(fn, delay = 300, _this) {
     }, delay)
   }
 }
+
+/**
+ * 预加载图片
+ * @param {Array} preloadImgs 图片列表
+ */
+export function preloadImg(preloadImgs) {
+  Object.keys(preloadImgs).forEach(image => {
+    new Image().src = image
+  })
+}

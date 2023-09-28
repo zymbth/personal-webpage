@@ -1,6 +1,6 @@
 <script setup>
 import { onMounted } from 'vue'
-import { copyToClipBoard } from '@/utils/common-methods.js'
+import { copyToClipBoard, preloadImg } from '@/utils/common-methods.js'
 import FooterComp from '@/components/footer.vue'
 import TypedCareer from '@/components/typed-career.vue'
 import { Stars } from './stars.js'
@@ -9,6 +9,10 @@ import { imageParticle } from './img-particle-static'
 onMounted(() => {
   Stars.init('stars', 1000)
   imageParticle('avatar')
+
+  // 预加载 About 页封面背景图
+  const preloadImgs = import.meta.glob('@/assets/img/preload/*.{jpg,jpeg,png}')
+  preloadImg(preloadImgs)
 })
 
 // TODO: https://ai.baidu.com/tech/imageprocess/selfie_anime

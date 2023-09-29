@@ -55,7 +55,7 @@ onMounted(() => {
         ['score', '%', 'skill', 'description'],
         [75, 75, '数据库', '协同设计过供应链系统的数据库结构\n能熟练使用MySQL, PostgreSQL数据库'],
         [40, 40, 'Python', '掌握基本语法，为生产项目编写过RESTful接口、推荐算法'],
-        [80, 80, 'Git', '熟练使用Git管理代码，进行团队协作开发、项目版本控制。\n深刻理解Git工作流，有丰富的实际使用经验'],
+        [70, 70, 'Git', '熟练使用Git管理代码，进行团队协作开发、项目版本控制。\n深刻理解Git工作流，有丰富的实际使用经验'],
         [86, 86, 'Java', '擅长 SpringBoot + SpringMVC + MybatisPlus 框架'],
         [75, 75, 'CSS', '熟练的CSS技能者，熟悉CSS3的新特性，在现代布局、移动端兼容等方面具备丰富的经验和实践能力。\n能熟练得实现响应式、移动端优先的设计。\n熟悉CSS预处理器的使用，以提高CSS代码的可读性、可维护性和可重用性。'],
         [85, 85, 'HTML', '具备扎实的HTML技能，熟悉各种HTML标签、属性和语法。'],
@@ -95,7 +95,9 @@ const techStack = [
   '熟悉Web性能优化，提供性能良好的Web项目',
   '熟练使用Git管理代码，进行团队协作开发、项目版本控制。理解Git工作流，有丰富的实际使用经验',
   '熟练使用SpringBoot & Mybatis Plus开发后端项目，熟悉MySQL/PostgreSQL，有数据库设计能力与经验',
-  '其它技术栈：jQuery（熟练）, Angular（基础）, Ionic（基础）, element ui/element plus（熟练）, mui（熟练）, Java（熟练）, MySQL（熟练），PostgreSQL（熟练）, Nginx（熟练）, python（基础）'
+  '其它技术栈：webpack（基础），vite（基础），Angular（基础），React（基础），Sass（熟练），jQuery（熟练），Ionic（基础），' +
+    'element ui/element plus（熟练），Echarts（熟练），d3.js（基础），Nuxt（基础），Nest.js（基础），' +
+    'Nginx（熟练），python（基础）'
 ]
 </script>
 <template>

@@ -60,6 +60,7 @@ onMounted(() => {
   font-size: 14px;
   color: #ddd;
   text-align: left;
+  background-color: #171a19;
 }
 #stars {
   position: absolute;

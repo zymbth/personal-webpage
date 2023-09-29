@@ -22,8 +22,8 @@ export const Stars = {
   //  INIT
   init: function (canvasId = 'stars', amount = 1000) {
     this.canvas = document.getElementById(canvasId);
-    this.canvas.width = window.innerWidth;
-    this.canvas.height = window.innerHeight;
+    this.canvas.width = window.innerWidth-1;
+    this.canvas.height = window.innerHeight-1;
     this.canvas.style.display = 'block';
     this.context = this.canvas.getContext('2d');
 

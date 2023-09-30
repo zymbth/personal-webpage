@@ -5,7 +5,7 @@ import 'nprogress/nprogress.css' // progress bar style
 const routes = [
   { path: '/', component: () => import('@/views/home/index.vue') },
   { path: '/about', component: () => import('@/views/about/index.vue') },
-  { path: '/resume', component: () => import('@/views/resume/index.vue') },
+  // { path: '/resume', component: () => import('@/views/resume/index.vue') },
 ]
 
 const router = createRouter({

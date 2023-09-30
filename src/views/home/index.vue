@@ -36,7 +36,7 @@ onMounted(() => {
             >Explore my blog</a
           >
           <!-- <a class="link color-green" href="javascript:void;" target="_blank">Tell me a secret</a> -->
-          <a class="link color-red" href="javascript:void;" target="_blank">View my resume</a>
+          <a class="link color-red" href="/resume" target="_blank">View my resume</a>
         </div>
         <div class="footer-links color-yellow">
           <a class="link" href="https://github.com/zymbth" target="_blank">GitHub</a>

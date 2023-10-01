@@ -1,5 +1,6 @@
 <script setup>
 import { computed, inject } from 'vue'
+import { copyToClipBoard } from '@/utils/common-methods.js'
 import TypedCareer from '@/components/typed-career.vue'
 import YiyanComp from './yiyan.vue'
 
@@ -32,7 +33,9 @@ const bgPosi = computed(() => -Math.floor(scrollTop.value / 2) + 'px')
         </div>
         <div class="info">
           <label>E-MAIL</label>
-          <span>ymzhaobth@foxmail.com</span>
+          <span @click="copyToClipBoard('ymzhaobth@foxmail.com')" style="cursor: copy"
+            >ymzhaobth@foxmail.com</span
+          >
         </div>
         <div class="info">
           <label>WEBSITE</label>

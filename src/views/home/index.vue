@@ -1,6 +1,6 @@
 <script setup>
 import { onMounted } from 'vue'
-import { copyToClipBoard, preloadImg } from '@/utils/common-methods.js'
+import { preloadImg } from '@/utils/common-methods.js'
 import FooterComp from '@/components/footer.vue'
 import TypedCareer from '@/components/typed-career.vue'
 import { Stars } from './stars.js'
@@ -28,7 +28,7 @@ onMounted(() => {
           <TypedCareer />
         </h1>
         <div class="infos">
-          <span @click="copyToClipBoard('ymzhaobth@foxmail.com')">ymzhaobth@foxmail.com</span>
+          <a href="mailto:ymzhaobth@foxmail.com">ymzhaobth@foxmail.com</a>
         </div>
         <div class="links">
           <a class="link color-yellow" href="/about">About me</a>
@@ -107,9 +107,7 @@ onMounted(() => {
   .infos {
     line-height: 2em;
     margin-bottom: 20px;
-    > span {
-      cursor: copy;
-    }
+    color: #fff;
   }
 }
 

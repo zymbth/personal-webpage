@@ -3,8 +3,8 @@
 <template>
   <div class="resume">
     <div class="resume-page">Resume</div>
-    <img src="http://ymzhao.work/files/test.png" />
-    <iframe src="http://ymzhao.work/files/前端开发工程师_赵跃旻_瑞典布莱津理工大学_13148787915.pdf" width="800" height="1200"></iframe>
+    <img src="http://127.0.0.1/files/test.png" />
+    <iframe src="http://127.0.0.1/files/前端开发工程师_赵跃旻_瑞典布莱津理工大学_13148787915.pdf" width="800" height="1200"></iframe>
   </div>
 </template>
 <style lang="scss" scoped>

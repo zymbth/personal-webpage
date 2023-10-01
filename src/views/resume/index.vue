@@ -3,7 +3,8 @@
 <template>
   <div class="resume">
     <div class="resume-page">Resume</div>
-    <iframe src="/resume-front-end" width="800" height="1200"></iframe>
+    <img src="/files/test.png" />
+    <!-- <iframe src="/resume-front-end" width="800" height="1200"></iframe> -->
   </div>
 </template>
 <style lang="scss" scoped>

@@ -3,7 +3,7 @@
 <template>
   <div class="resume">
     <div class="resume-page">Resume</div>
-    <img src="http://127.0.0.1:7777/test.png" />
+    <img src="http://localhost:7777/test.png" />
     <!-- <iframe src="/resume-front-end" width="800" height="1200"></iframe> -->
   </div>
 </template>

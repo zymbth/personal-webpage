@@ -3,7 +3,7 @@
 <template>
   <div class="resume">
     <div class="resume-page">Resume</div>
-    <img src="http://localhost:7777/test.png" />
+    <img src="http://ymzhao.work:7777/test.png" />
     <iframe src="http://localhost/files/前端开发工程师_赵跃旻_瑞典布莱津理工大学_13148787915.pdf" width="800" height="1200"></iframe>
   </div>
 </template>

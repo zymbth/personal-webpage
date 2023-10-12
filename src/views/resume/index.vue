@@ -3,7 +3,7 @@
   <div class="resume">
     <iframe
       name="front-end-resume"
-      src="http://ymzhao.work/files/前端开发工程师_赵跃旻_瑞典布莱津理工大学_13148787915.pdf"
+      src="http://ymzhao.work/files/前端开发工程师_赵跃旻_北京科技大学_13148787915.pdf"
       width="100%"></iframe>
   </div>
 </template>

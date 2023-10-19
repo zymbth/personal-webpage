@@ -50,8 +50,10 @@ function handleScroll(event) {
 
 .skills-block,
 .careers-block {
+  --width-limit: 1000px;
   width: 100%;
-  padding: 50px 80px;
+  // padding: 50px 80px;
+  padding: 50px max(80px,calc(50% - var(--width-limit)/2));
   box-sizing: border-box;
 }
 

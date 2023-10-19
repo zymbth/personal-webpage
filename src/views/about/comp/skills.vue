@@ -89,16 +89,29 @@ onMounted(() => {
 })
 
 const techStack = [
-  '熟练掌握HTML5/CSS3/ES6，擅长移动/桌面端网页开发、H5混合开发、小程序、django模板等多种应用场景',
-  '熟练掌握vue.js开发框架，应用于SPA项目、渐进式移动应用、混合应用',
-  '深刻理解前端工程化，并践行于项目开发中',
-  '熟悉Web性能优化，提供性能良好的Web项目',
-  '熟练使用Git管理代码，进行团队协作开发、项目版本控制。理解Git工作流，有丰富的实际使用经验',
-  '熟练使用SpringBoot & Mybatis Plus开发后端项目，熟悉MySQL/PostgreSQL，有数据库设计能力与经验',
-  '其它技术栈：webpack（基础），vite（基础），Angular（基础），React（基础），Sass（熟练），jQuery（熟练），Ionic（基础），' +
-    'element ui/element plus（熟练），Echarts（熟练），d3.js（基础），Nuxt（基础），Nest.js（基础），' +
-    'Nginx（熟练），python（基础）'
+  'HTML/CSS/JS 基础扎实，熟练掌握 HTML5/CSS3/ES6，擅长移动/PC端web开发、hybrid开发、小程序等开发模式',
+  '熟悉 Vue 框架并对其源码有过深入研究，且熟悉 Vue 相关技术栈，项目经验丰富',
+  '深入理解工程化，熟悉 Vite/Webpack/Rollup 等构建工具，掌握常见构建工具优化方案，提供高性能 Web 应用',
+  '有全栈开发经验，熟练使用 SpringBoot & Mybatis Plus 开发后端项目(2年Java经验-零售供应链项目)，熟悉 MySQL/PostgreSQL，有数据库设计能力与项目经验。了解 Nodejs 及其生态，如 Koa/Nestjs，并能使用 Nodejs 搭建基本的后台服务',
+  '熟练使用 Git 管理代码，进行团队协作开发、项目版本控制。理解 Git 工作流，有丰富的实践经验',
+  '其它技术栈：jQuery(熟练)，AngularJS(基础)，React(基础)，TypeScript(基础)，Sass(熟练)，Ionic(基础)，Echarts(熟练)，d3.js(基础)，Nuxt(基础)，MicroApp(基础)，Nest.js(基础)，Nginx(熟练)，docker(基础)，python(基础)，vitepress(熟练)'
 ]
+
+// 有扎实的CSS和JS基础，熟悉最新规范，熟悉TypeScript更佳
+// 熟悉前端性能优化，网络加载优化、界面渲染优化等优化方式和技巧，并在项目中应用
+// 熟悉CI\CD持续集成、持续交付、持续部署流程，并有使用经验
+// 熟悉HTTP协议、网络安全知识，如xss/csrf、sql注入、协议漏洞，浏览器漏洞。关注业界安全动态。
+// 精通Ajax DOM JSON等相关技术，熟练使用原生JS编程； 
+// 前端团队建设和项目管理，不断提升团队整体能力、研发效率和质量
+// 在前端产品、技术、工程化等方面有深入的思考和技术视野，对技术架构演进有着清晰、成熟的思路
+// 有一定的前端模块化、工程化开发经验，能利用自身技术能力提升团队研发效率
+// 对前端工程化与模块化有所掌握，并有实践经验（如RequireJS/SeaJS/webpack等），重视团队协作，愿意探寻和改进目前还不成熟的前端开发流程，了解各种常用工具; 
+// 对前端模块化、组件化有着深入的理解和实践，熟练掌握并研究过vue，react中的一种；
+// 熟悉ES规范，有跨浏览器、响应式前端开发项目经验
+// 熟练使用各种前端调试工具，性能分析工具；
+// 熟悉小程序、UniApp、electron.js和Fluter等跨平台及响应式原理；
+// 了解Node.js、qiankun.js；具备一定的业务理解及分析能力，排查问题能力；
+// 有 Mobile Web 开发及性能优化方面的实践经验，有Hybrid、小程序开发经验
 </script>
 <template>
   <!-- skills -->

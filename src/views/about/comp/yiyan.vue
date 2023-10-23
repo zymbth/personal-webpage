@@ -25,6 +25,7 @@ const fetchYiYan = () => {
       Object.assign(yiyan, getObjectByTmpl(tmpl, {}))
       setTimeout(() => {
         Object.assign(yiyan, getObjectByTmpl(tmpl, res ?? {}))
+        yiyan.hitokoto = `「 ${yiyan.hitokoto} 」`
       }, 300)
     }).finally(_ => {
       loading.value = false

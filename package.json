@@ -1,24 +1,20 @@
 {
-  "name": "ymzhao-website",
   "private": true,
-  "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "nprogress": "^0.2.0",
-    "typed.js": "2.0.12",
-    "vue": "3.2.37",
-    "vue-router": "4.0.13"
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^4.0.0",
-    "rollup-plugin-visualizer": "^5.9.0",
-    "sass": "^1.58.3",
-    "vite": "^4.1.0",
-    "vite-plugin-compression": "^0.5.1"
+    "nuxt": "^3.7.4"
+  },
+  "dependencies": {
+    "echarts": "^5.4.3",
+    "nprogress": "^0.2.0",
+    "sass": "^1.69.4",
+    "typed.js": "^2.0.16"
   }
 }

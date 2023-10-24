@@ -1,23 +1,42 @@
-# website1
+# Nuxt 3 Minimal Starter
 
-## Project setup
+Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
-```bash
-yarn
-```
+## Setup
 
-### Compiles and hot-reloads for development
+Make sure to install the dependencies:
 
 ```bash
-yarn dev
+# yarn
+yarn install
+
+# npm
+npm install
+
+# pnpm
+pnpm install
 ```
 
-### Compiles and minifies for production
+## Development Server
+
+Start the development server on http://localhost:3000
 
 ```bash
-yarn build
+npm run dev
 ```
 
-### Customize configuration
+## Production
 
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Build the application for production:
+
+```bash
+npm run build
+```
+
+Locally preview production build:
+
+```bash
+npm run preview
+```
+
+Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.

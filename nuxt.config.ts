@@ -3,12 +3,11 @@
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-  build: {
-    // transpile: [/echarts/],
-    analyze: {
-      analyzerMode: 'static'
-    },
-  },
+  // build: {
+  //   // transpile: [/echarts/],
+  //   // 打包分析
+  //   analyze: { analyzerMode: 'static' },
+  // },
   app: {
     head: {
       link: [
@@ -17,7 +16,6 @@ export default defineNuxtConfig({
     }
   },
   // webpack: {
-  //   analyze: { analyzerMode: 'static' },
   //   plugins: [
   //     new CompressionWebpackPlugin({
   //       filename: '[path].gz[query]',
@@ -27,7 +25,7 @@ export default defineNuxtConfig({
   //       minRatio: 0.8,
   //     })
   //   ]
-  // }
+  // },
   vite: {
     build: {
       rollupOptions: {

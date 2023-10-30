@@ -10,7 +10,8 @@ export default (canvasId) => {
   let canvas = document.getElementById(canvasId)
   let ctx = canvas.getContext('2d') // ctx
 
-  const imgWidth = 512, imgHeight = 683
+  let imgWidth = 512, imgHeight = 683
+  if(window.innerWidth && window.innerWidth < imgWidth) imgWidth = window.innerWidth
   particlizeImage()
 
   // 粒子化图片

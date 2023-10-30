@@ -10,9 +10,7 @@ const wrapInnerRef = ref()
 const scrollTop = ref(0)
 provide('scrollTop', scrollTop)
 
-let coverEl // , isScrolling = false
 onMounted(() => {
-  coverEl = document.querySelector('.cover')
   wrapInnerRef.value.addEventListener('scroll', handleScroll)
 })
 
@@ -21,26 +19,8 @@ onBeforeUnmount(() => {
 })
 
 function handleScroll(event) {
-  // console.log('coverEl.getBoundingClientRect()?.top', coverEl.getBoundingClientRect()?.top)
-  // console.log('window.scrollY', window.scrollY)
-  // console.log('event.target.scrollTop', event.target.scrollTop)
-  scrollTop.value = event.target.scrollTop // coverEl.getBoundingClientRect()?.top
+  scrollTop.value = event.target.scrollTop
 }
-/**
- * 打包后滚动出现阻塞感
- * 可能是因为在处理滚动事件时存在一些性能问题。在上面的代码中：
- * handleScroll 函数在每次滚动事件发生时都会调用 coverEl.getBoundingClientRect()?.top 来获取 coverEl 元素相对于视口的位置。这可能会导致频繁的 DOM 计算和重绘，从而影响滚动的流畅性。
- * 为了改善性能，你可以尝试使用 requestAnimationFrame 方法来延迟处理滚动事件。这样可以将多个滚动事件合并为一个，减少不必要的计算和重绘操作。
- */
-// function handleScroll(event) {
-//   if (!isScrolling) {
-//     isScrolling = true
-//     requestAnimationFrame(() => {
-//       scrollTop.value = coverEl.getBoundingClientRect()?.top
-//       isScrolling = false
-//     })
-//   }
-// }
 </script>
 <template>
   <div class="no-scroll-bar">

@@ -177,4 +177,9 @@ onMounted(() => {
     }
   }
 }
+@media screen and (max-width: 750px) {
+  #avatar {
+    right: 0;
+  }
+}
 </style>

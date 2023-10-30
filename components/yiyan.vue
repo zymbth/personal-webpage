@@ -35,7 +35,7 @@ const fetchYiYan = () => {
 <template>
   <!-- Yi Yan -->
   <transition name="breadcrumb">
-    <div class="yiyan" v-if="!!yiyan.hitokoto">
+    <div class="yiyan" v-show="!!yiyan.hitokoto" @dblclick="fetchYiYan()">
       <span class="yiyan-content">{{ yiyan.hitokoto }}</span>
       <span v-show="yiyan.from_who" class="yiyan-author">———— {{ yiyan.from_who }}</span>
       <svg
@@ -87,7 +87,7 @@ const fetchYiYan = () => {
   .yiyan-content {
     font-size: 16px;
     text-align: left;
-    text-indent: 2em;
+    // text-indent: 2em;
     text-shadow: 0px 0px 2px #000000b3;
   }
   .yiyan-author {
@@ -105,7 +105,8 @@ const fetchYiYan = () => {
   .icon-loading {
     animation: spin 1.2s ease-in-out infinite;
   }
-  &:hover .icon {
+  &:hover .icon,
+  .icon.icon-loading {
     display: block;
   }
 }
@@ -120,7 +121,7 @@ const fetchYiYan = () => {
 @media screen and (max-width: 920px) {
   .yiyan {
     min-width: 36vw;
-    max-width: 70vw;
+    max-width: calc(100vw - 40px);
     .icon {
       top: -4px;
       right: 0;

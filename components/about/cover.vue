@@ -58,7 +58,7 @@ const bgPosi = computed(() => Math.max(0, Math.floor(scrollTop.value / 2)) + 'px
   background-repeat: no-repeat;
   position: relative;
   overflow: hidden;
-  transform: background-position-y 0.3s ease-in-out;
+  // transform: background-position-y 0.05s ease-in-out;
 }
 .intro {
   display: flex;

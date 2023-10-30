@@ -5,7 +5,7 @@
 // import YiyanComp from './yiyan.vue'
 
 const scrollTop = inject('scrollTop')
-const bgPosi = computed(() => -Math.floor(scrollTop.value / 2) + 'px')
+const bgPosi = computed(() => Math.floor(scrollTop.value / 2) + 'px')
 </script>
 <template>
   <!-- 封面 -->

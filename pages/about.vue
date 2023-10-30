@@ -1,9 +1,7 @@
 <script setup>
 useHead({
   title: 'About Me',
-  meta: [
-    { name: 'description', content: 'My amazing site.' }
-  ],
+  meta: [{ name: 'description', content: 'My amazing site.' }],
 })
 
 const wrapInnerRef = ref()
@@ -52,7 +50,7 @@ function handleScroll(event) {
   --width-limit: 1000px;
   width: 100%;
   // padding: 50px 80px;
-  padding: 50px max(80px,calc(50% - var(--width-limit)/2));
+  padding: 50px max(80px, calc(50% - var(--width-limit) / 2));
   box-sizing: border-box;
 }
 

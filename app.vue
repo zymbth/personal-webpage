@@ -10,7 +10,7 @@
 </template>
 <style lang="scss">
 // import '~/assets/css/index.css';
-@import url("~/assets/css/index.css");
+@import url('~/assets/css/index.css');
 
 body {
   margin: 0;
@@ -38,5 +38,13 @@ body {
   margin: 0 auto 1rem;
   text-align: center;
   color: #4e4e4e;
+}
+@media screen and (max-width: 750px) {
+  @supports (height: 100dvh) {
+    .no-scroll-bar,
+    .wrapper {
+      height: 100dvh;
+    }
+  }
 }
 </style>

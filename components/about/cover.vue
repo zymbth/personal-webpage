@@ -55,9 +55,10 @@ const bgPosi = computed(() => Math.max(0, Math.floor(scrollTop.value / 2)) + 'px
   background-size: cover;
   background-position-x: 50%;
   background-position-y: v-bind(bgPosi);
+  background-repeat: no-repeat;
   position: relative;
   overflow: hidden;
-  transform: background-position 0.2s ease-in-out;
+  transform: background-position-y 0.3s ease-in-out;
 }
 .intro {
   display: flex;

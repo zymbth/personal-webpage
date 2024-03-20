@@ -112,7 +112,6 @@ export const Stars = {
 
   //  ANIMATE
   animate: function () {
-    console.log('animate')
     Stars.timer = requestAnimationFrame(Stars.animate)
     Stars.context.clearRect(0, 0, Stars.canvas.width, Stars.canvas.height)
 

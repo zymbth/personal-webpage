@@ -1,31 +1,13 @@
-// const CompressionWebpackPlugin = require('compression-webpack-plugin')
-// const productionGzipExtensions = ['js', 'css']
-
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-  // build: {
-  //   // transpile: [/echarts/],
-  //   // 打包分析
-  //   analyze: { analyzerMode: 'static' },
-  // },
+  devtools: { enabled: true },
   app: {
     head: {
-      link: [
-        { rel: 'icon', type: 'image/jpg', href: '/icon.jpg' }
-      ]
-    }
+      link: [{ rel: 'icon', type: 'image/jpg', href: '/icon.jpg' }],
+    },
+    pageTransition: { name: 'page', mode: 'out-in', duration: 300 },
   },
-  // webpack: {
-  //   plugins: [
-  //     new CompressionWebpackPlugin({
-  //       filename: '[path].gz[query]',
-  //       algorithm: 'gzip',
-  //       test: new RegExp('\\.(' + productionGzipExtensions.join('|') + ')$'),
-  //       threshold: 10240,
-  //       minRatio: 0.8,
-  //     })
-  //   ]
-  // },
+  css: ['~/assets/css/index.css'],
   vite: {
     build: {
       rollupOptions: {
@@ -33,11 +15,11 @@ export default defineNuxtConfig({
           // manualChunks: {
           //   echarts: ['echarts'],
           // }
-          manualChunks: (id) => {
-            if(id.includes('echarts')) return 'echarts'
-          } 
-        }
-      }
-    }
-  }
+          manualChunks: id => {
+            if (id.includes('echarts')) return 'echarts'
+          },
+        },
+      },
+    },
+  },
 })

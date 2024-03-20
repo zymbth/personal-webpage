@@ -1,9 +1,4 @@
 <script setup>
-// import { computed, inject } from 'vue'
-// import { copyToClipBoard } from '@/utils/common-methods.js'
-// import TypedCareer from '@/components/typed-career.vue'
-// import YiyanComp from './yiyan.vue'
-
 const scrollTop = inject('scrollTop')
 const bgPosi = computed(() => Math.max(0, Math.floor(scrollTop.value / 2)) + 'px')
 </script>
@@ -58,7 +53,6 @@ const bgPosi = computed(() => Math.max(0, Math.floor(scrollTop.value / 2)) + 'px
   background-repeat: no-repeat;
   position: relative;
   overflow: hidden;
-  // transform: background-position-y 0.05s ease-in-out;
 }
 .intro {
   display: flex;

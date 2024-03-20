@@ -8,7 +8,7 @@ import USTBLogo from '@/assets/img/career/USTB.webp'
 const careers = [
   {
     time: '2021/3/28',
-    title: '溪砾科技（深圳）有限公司',
+    title: '深圳雅济科技有限公司',
     logo: RevirLogo,
     posi: '前端负责人',
     contents: [

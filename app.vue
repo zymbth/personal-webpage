@@ -1,13 +1,11 @@
 <template>
-  <div>
-    <NuxtPage />
-  </div>
+  <NuxtPage />
 </template>
 <style lang="scss">
-// @import url('~/assets/css/index.css');
 body {
   margin: 0;
   width: 100%;
+  overflow: hidden;
 }
 #app {
   -webkit-font-smoothing: antialiased;
@@ -36,7 +34,7 @@ body {
 // page transition
 .page-leave-active,
 .page-enter-active {
-  transition: all 0.2s linear;// ease-in-out;//cubic-bezier(0.59, 0.26, 0.56, 0.87);
+  transition: all 0.2s linear; // ease-in-out;//cubic-bezier(0.59, 0.26, 0.56, 0.87);
 }
 // 添加一个过渡延迟，从而创建一个带渐进延迟的动画序列
 .page-enter-active {

@@ -2,7 +2,8 @@
 useHead({
   title: '前端码农的履历及个人作品集',
   meta: [
-    { name: 'description', content: 'My amazing site.' }
+    { name: 'keywords', content: '赵跃旻,网站,个人信息,简历,履历,工作经验,学历,Yuemin Zhao,ymzhao' },
+    { name: 'description', content: '赵跃旻的个人网站，包括我的工作经验、教育背景等' }
   ],
 })
 onMounted(() => {

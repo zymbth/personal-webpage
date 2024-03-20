@@ -9,6 +9,9 @@ onMounted(() => {
   Stars.init('stars', 1000)
   useParticleImage('avatar')
 })
+onBeforeUnmount(() => {
+  Stars.destroy()
+})
 </script>
 <template>
   <div class="wrapper">

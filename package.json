@@ -5,7 +5,7 @@
     "dev": "nuxt dev --port 3030",
     "build": "nuxt build",
     "generate": "nuxt generate",
-    "generate-github": "nuxt generate --base /personal-webpage/",
+    "build-github": "NUXT_APP_BASE_URL=/personal-webpage/ nuxt build -preset github_pages",
     "analyze": "nuxt analyze",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"

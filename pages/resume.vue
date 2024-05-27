@@ -12,7 +12,7 @@ useHead({
   <div class="resume">
     <iframe
       name="front-end-resume"
-      src="./前端开发工程师_赵跃旻_北京科技大学_13148787915.pdf"
+      src="/前端开发工程师_赵跃旻_北京科技大学_13148787915.pdf"
       width="100%"></iframe>
   </div>
 </template>

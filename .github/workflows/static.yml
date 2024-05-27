@@ -26,17 +26,21 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0 # Not needed if lastUpdated is not enabled
-      - run: corepack enable
+      # - run: corepack enable
       # - uses: pnpm/action-setup@v2 # Uncomment this if you're using pnpm
       # - uses: oven-sh/setup-bun@v1 # Uncomment this if you're using Bun
-      - uses: actions/setup-node@v3
+      - name: Setup Node
+        uses: actions/setup-node@v3
         with:
           node-version: 18
-      - run: npm install
-      - run: NUXT_APP_BASE_URL=/personal-webpage/ npx nuxt build --preset github_pages
+      - name: Install dependencies
+        run: npm install
+      - name: Build Project
+        run: npm run generate-github
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:

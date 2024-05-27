@@ -2,10 +2,10 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "nuxt dev --port 3030",
+    "dev": "nuxt dev --port 3030 --host 0.0.0.0",
     "build": "nuxt build",
-    "generate": "nuxt generate",
     "build-github": "NUXT_APP_BASE_URL=/personal-webpage/ nuxt build -preset github_pages",
+    "generate": "nuxt generate",
     "analyze": "nuxt analyze",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"

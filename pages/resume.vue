@@ -1,6 +1,6 @@
 <script setup>
 useHead({
-  title: 'My Resume',
+  title: 'Resume | 前端开发工程师_赵跃旻_北京科技大学_13148787915',
   meta: [
     { name: 'keywords', content: '赵跃旻,简历,Yuemin Zhao,ymzhao,Resume' },
     { name: 'description', content: 'Resume of Yuemin Zhao' }
@@ -12,7 +12,7 @@ useHead({
   <div class="resume">
     <iframe
       name="front-end-resume"
-      src="/前端开发工程师_赵跃旻_北京科技大学_13148787915.pdf"
+      src="/resume.pdf"
       width="100%"></iframe>
   </div>
 </template>

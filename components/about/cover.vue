@@ -44,15 +44,10 @@ const bgPosi = computed(() => Math.max(0, Math.floor(scrollTop.value / 2)) + 'px
 </template>
 <style lang="scss" scoped>
 .cover {
-  min-height: clamp(400px, 100vh, 1000px);
-  // background-image: url(../../../assets/img/climbing-bg.jpg);
-  background-image: url(~/assets/img/climbing-bg.jpg);
-  background-size: cover;
-  background-position-x: 50%;
-  background-position-y: v-bind(bgPosi);
-  background-repeat: no-repeat;
   position: relative;
+  min-height: clamp(400px, 100vh, 1000px);
   overflow: hidden;
+  background-image: linear-gradient(45deg, #849448, #0258a5);
 }
 .intro {
   display: flex;
@@ -62,6 +57,11 @@ const bgPosi = computed(() => Math.max(0, Math.floor(scrollTop.value / 2)) + 'px
   align-items: center;
   height: 80vh;
   padding: 10vh 10vw;
+  background-image: url(~/assets/img/climbing-bg.jpg);
+  background-size: cover;
+  background-position-x: 50%;
+  background-position-y: v-bind(bgPosi);
+  background-repeat: no-repeat;
 }
 .avatar {
   width: 300px;

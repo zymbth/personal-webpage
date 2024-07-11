@@ -2,8 +2,11 @@
 useHead({
   title: '前端码农的履历及个人作品集',
   meta: [
-    { name: 'keywords', content: '赵跃旻,网站,个人信息,简历,履历,工作经验,学历,Yuemin Zhao,ymzhao' },
-    { name: 'description', content: '赵跃旻的个人网站，包括我的工作经验、教育背景等' }
+    {
+      name: 'keywords',
+      content: '赵跃旻,网站,个人信息,简历,履历,工作经验,学历,Yuemin Zhao,ymzhao',
+    },
+    { name: 'description', content: '赵跃旻的个人网站，包括我的工作经验、教育背景等' },
   ],
 })
 onMounted(() => {
@@ -28,7 +31,7 @@ onBeforeUnmount(() => {
         </div>
         <div class="links">
           <NuxtLink class="link color-yellow" to="/about">About me</NuxtLink>
-          <a class="link color-green" href="https://zymbth.github.io/ymzhao-blogs/" target="_blank"
+          <a class="link color-green" href="https://ymzhao-blog.pages.dev/" target="_blank"
             >Explore my blog</a
           >
           <!-- <a class="link color-green" href="javascript:void;" target="_blank">Tell me a secret</a> -->
@@ -37,7 +40,7 @@ onBeforeUnmount(() => {
         <div class="footer-links color-yellow">
           <a class="link" href="https://github.com/zymbth" target="_blank">GitHub</a>
           <a class="link" href="https://codepen.io/zymbth" target="_blank">Codepen</a>
-          <a class="link" href="https://zymbth.github.io/ymzhao-blogs/" target="_blank">Blog</a>
+          <a class="link" href="https://ymzhao-blog.pages.dev/" target="_blank">Blog</a>
           <a class="link" href="https://blog.csdn.net/ymzhaobth" target="_blank">CSDN</a>
           <a class="link" href="https://twitter.com/z_ymin" target="_blank">Twitter</a>
         </div>

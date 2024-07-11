@@ -66,8 +66,6 @@ const bgPosi = computed(() => Math.max(0, Math.floor(scrollTop.value / 2)) + 'px
 .avatar {
   width: 300px;
   text-align: center;
-  // border: 4px solid #ccc;
-  // box-shadow: 0 0 4px 2px #00000033;
 
   > img {
     display: block;

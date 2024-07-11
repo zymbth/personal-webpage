@@ -82,8 +82,10 @@ const bgPosi = computed(() => Math.max(0, Math.floor(scrollTop.value / 2)) + 'px
     line-height: 2em;
     display: block;
   }
-  &:deep .intro-typed,
-  &:deep .typed-cursor {
+}
+:deep(.avatar) {
+  .intro-typed,
+  .typed-cursor {
     color: rgb(255, 187, 0);
     text-shadow: 0px 0px 1px #000000;
   }

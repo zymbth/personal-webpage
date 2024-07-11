@@ -216,7 +216,7 @@ const techStack = [
     display: block;
   }
 }
-.skills-chart:deep .chart-skill {
+:deep(.skills-chart .chart-skill) {
   @include custom-li;
   max-width: max(270px, 25vw);
   white-space: break-spaces;

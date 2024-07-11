@@ -71,7 +71,7 @@ const careers = [
 .careers-block {
   overflow: hidden;
 }
-.time-line-wrap:deep .career-block:last-child .time-line {
+:deep(.time-line-wrap .career-block:last-child .time-line) {
   display: none;
 }
 </style>

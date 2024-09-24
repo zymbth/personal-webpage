@@ -31,7 +31,7 @@ onBeforeUnmount(() => {
         </div>
         <div class="links">
           <NuxtLink class="link color-yellow" to="/about">About me</NuxtLink>
-          <a class="link color-green" href="https://ymzhao-blog.pages.dev/" target="_blank"
+          <a class="link color-green" href="https://blog.ymzhao.work/" target="_blank"
             >Explore my blog</a
           >
           <!-- <a class="link color-green" href="javascript:void;" target="_blank">Tell me a secret</a> -->
@@ -40,7 +40,7 @@ onBeforeUnmount(() => {
         <div class="footer-links color-yellow">
           <a class="link" href="https://github.com/zymbth" target="_blank">GitHub</a>
           <a class="link" href="https://codepen.io/zymbth" target="_blank">Codepen</a>
-          <a class="link" href="https://ymzhao-blog.pages.dev/" target="_blank">Blog</a>
+          <a class="link" href="https://blog.ymzhao.work/" target="_blank">Blog</a>
           <a class="link" href="https://blog.csdn.net/ymzhaobth" target="_blank">CSDN</a>
           <a class="link" href="https://twitter.com/z_ymin" target="_blank">Twitter</a>
         </div>

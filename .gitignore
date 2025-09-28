@@ -13,3 +13,4 @@ dist
 # pnpm-lock.yaml
 
 stats.html
+.env

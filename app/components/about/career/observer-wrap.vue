@@ -57,7 +57,7 @@ onMounted(() => {
     height: 16px;
     width: 16px;
     border-radius: 50%;
-    background-color: #0ea4eb;
+    background-color: var(--theme-color);
     z-index: 2;
   }
   .time-line {
@@ -65,7 +65,7 @@ onMounted(() => {
     top: 0;
     left: 0;
     width: 2px;
-    background-color: #ddd;
+    background-color: var(--theme-color-2);
     transition: height 0.8s cubic-bezier(1, 0.5, 0.8, 1);
     z-index: 1;
   }
@@ -98,7 +98,7 @@ onMounted(() => {
     left: 0;
     top: -7px;
     font-size: 12px;
-    color: #666;
+    color: var(--tg-txt-color-1);
     transform: translateY(-100%);
   }
 }

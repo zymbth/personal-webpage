@@ -12,7 +12,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   width: 100%;
   text-align: left;
-  color: #2c3e50;
+  color: var(--tg-txt-color);
   margin: 0;
   padding: 0;
   /* overflow: auto; */
@@ -28,7 +28,7 @@ body {
 .page-desc {
   margin: 0 auto 1rem;
   text-align: center;
-  color: #4e4e4e;
+  color: var(--tg-txt-color-1);
 }
 
 // page transition

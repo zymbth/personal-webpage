@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     pageTransition: { name: 'page', mode: 'out-in', duration: 300 },
   },
   css: ['~/assets/css/index.css'],
+  modules: ['@unocss/nuxt'],
   vite: {
     build: {
       rollupOptions: {

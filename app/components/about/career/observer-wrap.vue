@@ -38,15 +38,13 @@ onMounted(() => {
         <p>{{ data.title }}</p>
       </div>
       <p>{{ data.posi }}</p>
-      <p v-for="(cont, idx) in data.contents" :key="idx" class="career-contents">{{ cont }}</p>
     </div>
   </div>
 </template>
 <style lang="scss" scoped>
 .career-block {
-  // border-left: 2px solid #ddd;
-  padding: 20px;
   position: relative;
+  padding: 20px 20px 40px;
 
   &::before {
     content: '';
@@ -57,8 +55,16 @@ onMounted(() => {
     height: 16px;
     width: 16px;
     border-radius: 50%;
+    border: 2px solid var(--theme-color);
     background-color: var(--theme-color);
+    transition: background-color 0.3s ease-in-out;
     z-index: 2;
+  }
+  &:hover::before {
+    background-color: var(--tg-bg-color);
+  }
+  &:hover .time-line-circle {
+    background-color: var(--tg-bg-color);
   }
   .time-line {
     position: absolute;
@@ -73,12 +79,12 @@ onMounted(() => {
 .career-block-inner {
   position: relative;
   padding: 1px 20px;
-  box-shadow: 0 0 12px -2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 12px -2px var(--shadow-color);
   border-radius: 6px;
+  background-color: var(--tg-bg-color-2);
   transition-property: transform, opacity;
   transition-duration: 0.8s;
   transition-timing-function: cubic-bezier(1, 0.5, 0.8, 1);
-  // transition: transform,height,opacity 0.8s cubic-bezier(1, 0.5, 0.8, 1);
 
   .career-title {
     display: flex;
@@ -91,6 +97,7 @@ onMounted(() => {
     > img {
       height: 36px;
       margin-right: 6px;
+      background-color: var(--tg-bg-color-2);
     }
   }
   .career-date {

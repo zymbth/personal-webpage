@@ -29,14 +29,15 @@ function handleScroll(event) {
       <!-- 封面 -->
       <AboutCover class="cover" />
       <!-- skills -->
-      <AboutSkills class="skills-block" />
+      <AboutSkills class="common-block" />
       <!-- Career -->
-      <AboutCareer class="careers-block" />
+      <AboutCareer class="common-block" />
+      <!-- <AboutPortfolio class="common-block" /> -->
       <Copyright class="footer" />
     </div>
   </div>
 </template>
-<style lang="scss" scoped>
+<style lang="scss">
 .no-scroll-bar {
   overflow: hidden;
   width: 100vw;
@@ -48,22 +49,34 @@ function handleScroll(event) {
   }
 }
 
-.skills-block,
-.careers-block {
+.common-block {
   --width-limit: 1000px;
-  width: 100%;
-  // padding: 50px 80px;
   padding: 50px max(80px, calc(50% - var(--width-limit) / 2));
-  box-sizing: border-box;
 }
 
 .footer {
   margin-bottom: 16px;
 }
 
+.page-title {
+  margin: 1rem auto 2rem;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1.5em;
+  text-transform: uppercase;
+  &:has(+ .page-desc) {
+    margin-bottom: 0;
+  }
+}
+.page-desc {
+  margin: 0 auto 2rem;
+  text-align: center;
+  color: var(--tg-txt-color-1);
+}
+
 @media screen and (max-width: 750px) {
-  .skills-block,
-  .careers-block {
+  .common-block {
     padding: 20px;
   }
 }

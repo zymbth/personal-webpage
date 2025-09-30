@@ -1,12 +1,13 @@
 import {
   defineConfig,
   presetAttributify,
-  presetIcons,
+  // presetIcons,
   presetWind3,
   transformerAttributifyJsx,
   transformerDirectives,
   transformerVariantGroup,
 } from 'unocss'
+import presetIcons from '@unocss/preset-icons/browser'
 import type { PresetWind3Theme } from 'unocss'
 
 export default defineConfig({
@@ -14,7 +15,12 @@ export default defineConfig({
   presets: [
     presetWind3({ dark: 'class' }),
     presetAttributify({ nonValuedAttribute: true }),
-    presetIcons()
+    // presetIcons(),
+    presetIcons({
+      collections: {
+        mdi: () => import('@iconify-json/mdi/icons.json').then(i => i.default),
+      },
+    })
   ],
   transformers: [transformerVariantGroup(), transformerDirectives(), transformerAttributifyJsx()],
   content: {

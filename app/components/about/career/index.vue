@@ -59,8 +59,8 @@ const careers = [
 ]
 </script>
 <template>
-  <div class="careers-block">
-    <h5 class="page-title">Career</h5>
+  <div class="of-hidden">
+    <h2 class="page-title">Career</h2>
     <p class="page-desc">Education and working experiences</p>
     <div class="time-line-wrap">
       <AboutCareerObserverWrap v-for="item in careers" :data="item"></AboutCareerObserverWrap>
@@ -68,9 +68,6 @@ const careers = [
   </div>
 </template>
 <style lang="scss" scoped>
-.careers-block {
-  overflow: hidden;
-}
 :deep(.time-line-wrap .career-block:last-child .time-line) {
   display: none;
 }

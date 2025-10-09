@@ -1,0 +1,17 @@
+button.text,
+button.text:hover,
+button.text:active {
+  background-color: transparent;
+}
+
+dialog {
+  width: min(70vw, 900px);
+  min-height: 200px;
+  padding: 30px;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--tg-bg-color-2);
+}
+dialog::backdrop {
+  background-color: var(--dialog-backdrop-bg);
+}

@@ -3,7 +3,7 @@ useHead({
   title: 'About Me',
   meta: [
     { name: 'keywords', content: '赵跃旻,网站,个人信息,简历,履历,工作经验,学历,Yuemin Zhao,ymzhao' },
-    { name: 'description', content: '赵跃旻的个人网站，包括我的工作经验、教育背景等' }
+    { name: 'description', content: '赵跃旻的个人网站，包括工作经验、教育背景、作品等信息' },
   ],
 })
 
@@ -27,17 +27,19 @@ function handleScroll(event) {
   <div class="no-scroll-bar">
     <div class="wrap-inner" ref="wrapInnerRef">
       <!-- 封面 -->
-      <AboutCover class="cover" />
+      <!-- <AboutCover class="cover" /> -->
       <!-- skills -->
-      <AboutSkills class="common-block" />
+      <!-- <AboutSkills class="common-block" /> -->
       <!-- Career -->
-      <AboutCareer class="common-block" />
-      <!-- <AboutPortfolio class="common-block" /> -->
+      <!-- <AboutCareer class="common-block" /> -->
+      <AboutPortfolio class="common-block" />
       <Copyright class="footer" />
     </div>
   </div>
 </template>
 <style lang="scss">
+@use '../assets/css/common.css';
+
 .no-scroll-bar {
   overflow: hidden;
   width: 100vw;

@@ -1,0 +1,47 @@
+[
+  {
+    "type": "Libraries",
+    "briefTitle": "",
+    "title": "HTML 转 A4 模板工具",
+    "description": "一个用于将网页内容转换为 A4 尺寸格式的 JavaScript 工具库，支持预览与打印。可智能处理分页逻辑，如避免内容被截断、表格跨页自动复制表头、整体单元移至下一页等，适用于生成所见即所得的打印页面或 PDF 文档。",
+    "img": "",
+    "meta": [
+      ["Stack", "JavaScript, cash-dom"],
+      ["Repository", "https://github.com/zymbth/html-to-a4-template"],
+      ["View", "https://zymbth.github.io/html-to-a4-template/"]
+    ]
+  },
+  {
+    "type": "Scripts",
+    "briefTitle": "",
+    "title": "网页内容选择截图",
+    "description": "油猴脚本：使用SnapDOM实现的网页DOM捕获截图",
+    "img": "https://raw.githubusercontent.com/zymbth/monkey-snapdom/refs/heads/master/demo-snapdom.gif",
+    "meta": [
+      [
+        "Stack",
+        "Vite, JavaScript"
+      ],
+      [
+        "Repository",
+        "https://github.com/zymbth/monkey-snapdom"
+      ],
+      [
+        "View",
+        "https://greasyfork.org/zh-CN/scripts/542533-%E7%BD%91%E9%A1%B5%E5%86%85%E5%AE%B9%E9%80%89%E6%8B%A9%E6%88%AA%E5%9B%BE"
+      ]
+    ]
+  },
+  {
+    "type": "",
+    "briefTitle": "",
+    "title": "",
+    "description": "",
+    "img": "",
+    "meta": [
+      ["Stack",""],
+      ["Repository",""],
+      ["View",""]
+    ]
+  }
+]

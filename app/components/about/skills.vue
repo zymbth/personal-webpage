@@ -19,7 +19,7 @@ const data = ref([
     logo: 'i-mdi:fullscreen',
     name: 'Backend Developer',
     experiences: '2 years',
-    icon: 'i-mdi:language-java',
+    icon: 'i-mdi:server-network-outline', // 'i-mdi:language-java',
     skills: [
       { name: 'Java', score: 80, description: '' },
       { name: 'Python', score: 60, description: '' },

@@ -14,8 +14,6 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 
-  --link-color: #2ea085;
-
   /* 主题色 */
   --theme-color: #2ea085;
   --theme-color-1: #33b193;
@@ -31,14 +29,19 @@
   --tg-bg-color-3: #ccc;
 
   --shadow-color: rgba(0, 0, 0, 0.2);
+  --dialog-backdrop-bg: rgba(0, 0, 0, 0.2);
 }
 
 a {
   font-weight: 500;
   color: var(--theme-color);
   text-decoration: inherit;
+  cursor: pointer;
 }
 a:hover {
+  color: var(--theme-color-2);
+}
+a:active {
   color: var(--theme-color-1);
 }
 
@@ -49,21 +52,22 @@ h1 {
 
 button {
   border-radius: 8px;
-  border: 1px solid transparent;
+  border: none;
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: var(--theme-color);
   cursor: pointer;
-  transition: border-color 0.25s;
 }
 button:hover {
-  border-color: var(--link-color);
+  background-color: var(--theme-color-2);
+}
+button:active {
+  background-color: var(--theme-color-1);
 }
 button:focus,
 button:focus-visible {
-  /* outline: 4px auto -webkit-focus-ring-color; */
   outline: none;
 }
 
@@ -80,5 +84,6 @@ button:focus-visible {
     --tg-bg-color-2: #252a2d;
     --tg-bg-color-3: #3e4446;
     --shadow-color: rgba(255, 255, 255, 0.12);
+    --dialog-backdrop-bg: rgba(28, 32, 34, 0.7);
   }
 }

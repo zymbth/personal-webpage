@@ -32,6 +32,11 @@
   --dialog-backdrop-bg: rgba(0, 0, 0, 0.2);
 }
 
+::selection {
+  background-color: var(--tg-txt-color-1);
+  color: var(--tg-bg-color);
+}
+
 a {
   font-weight: 500;
   color: var(--theme-color);

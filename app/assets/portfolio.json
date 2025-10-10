@@ -4,7 +4,7 @@
     "briefTitle": "",
     "title": "HTML 转 A4 模板工具",
     "description": "一个用于将网页内容转换为 A4 尺寸格式的 JavaScript 工具库，支持预览与打印。可智能处理分页逻辑，如避免内容被截断、表格跨页自动复制表头、整体单元移至下一页等，适用于生成所见即所得的打印页面或 PDF 文档。",
-    "img": "",
+    "img": ["/portfolio-imgs/demo-html2a4.gif","/portfolio-imgs/demo-html2a4-1.gif"],
     "meta": [
       ["Stack", "JavaScript, cash-dom"],
       ["Repository", "https://github.com/zymbth/html-to-a4-template"],
@@ -16,20 +16,107 @@
     "briefTitle": "",
     "title": "网页内容选择截图",
     "description": "油猴脚本：使用SnapDOM实现的网页DOM捕获截图",
-    "img": "https://raw.githubusercontent.com/zymbth/monkey-snapdom/refs/heads/master/demo-snapdom.gif",
+    "img": ["/portfolio-imgs/demo-snapdom.gif"],
     "meta": [
-      [
-        "Stack",
-        "Vite, JavaScript"
-      ],
-      [
-        "Repository",
-        "https://github.com/zymbth/monkey-snapdom"
-      ],
-      [
-        "View",
-        "https://greasyfork.org/zh-CN/scripts/542533-%E7%BD%91%E9%A1%B5%E5%86%85%E5%AE%B9%E9%80%89%E6%8B%A9%E6%88%AA%E5%9B%BE"
-      ]
+      ["Stack","Vite, JavaScript"],
+      ["Repository","https://github.com/zymbth/monkey-snapdom"],
+      ["View","https://greasyfork.org/zh-CN/scripts/542533-%E7%BD%91%E9%A1%B5%E5%86%85%E5%AE%B9%E9%80%89%E6%8B%A9%E6%88%AA%E5%9B%BE"]
+    ]
+  },
+  {
+    "type": "Open Source",
+    "briefTitle": "",
+    "title": "开源贡献：Trumbowyg 富文本编辑器",
+    "description": "为开源项目-富文本编辑器 Trumbowyg 贡献了中文语言包并修复了其 Table 插件在特定操作后无法调整单元格宽度的 Bug。",
+    "img": ["/portfolio-imgs/demo-trumbowyg.jpg"],
+    "meta": [
+      ["Stack","JavaScript, jQuery"],
+      ["Repository","https://github.com/Alex-D/Trumbowyg"],
+      ["View",""]
+    ]
+  },
+  {
+    "type": "Projects",
+    "briefTitle": "",
+    "title": "Vue3 Admin Template",
+    "description": "该项目是将 PanJiaChen 的 vue-admin-template 迁移到 Vue 3 与 Element Plus 的版本，解决了兼容性问题，便于快速搭建管理系统。基于 Vue 3 全家桶，使用 vue-cli 构建，开箱即用，适合新项目快速启动开发。",
+    "img": ["/portfolio-imgs/demo-vue3-admin-template.jpg"],
+    "meta": [
+      ["Stack","Vue3, Element Plus, Vue CLI"],
+      ["Repository","https://github.com/zymbth/vue3-admin-template"],
+      ["View","https://zymbth.github.io/vue3-admin-template/"]
+    ]
+  },
+  {
+    "type": "Projects",
+    "briefTitle": "",
+    "title": "可编辑的Element Plus表格",
+    "description": "一个基于 Element Plus Table 实现的可编辑表格组件，可编辑表格单元格内容、新增/删除表格行/列，并设计实现了两种交互模式。",
+    "img": ["/portfolio-imgs/demo-editable-table.jpg","/portfolio-imgs/demo-editable-table-v2.png","/portfolio-imgs/demo-editable-table-v2-edit.jpg"],
+    "meta": [
+      ["Stack","Vue 3, Element Plus"],
+      ["Repository","https://github.com/zymbth/editable-table"],
+      ["View","https://zymbth.github.io/editable-table/"]
+    ]
+  },
+  {
+    "type": "Projects",
+    "briefTitle": "",
+    "title": "Element Plus 虚拟化表格深入实践",
+    "description": "深入实践 Element Plus 虚拟化表格组件 TableV2，实现了排序、筛选、自定义单元格与表头渲染、表头分组等高级功能。适用于需要处理大量数据但又希望保持良好性能的中后台场景。项目包含完整的在线演示和详细使用说明，帮助开发者快速掌握 TableV2 的灵活用法。",
+    "img": ["/portfolio-imgs/demo-element-plus-tablev2.jpg"],
+    "meta": [
+      ["Stack","Vue3, Element Plus, JSX/TSX"],
+      ["Repository","https://github.com/zymbth/element-plus-tablev2-demo"],
+      ["View","https://zymbth.github.io/element-plus-tablev2-demo/"]
+    ]
+  },
+  {
+    "type": "",
+    "briefTitle": "",
+    "title": "仿饿了么地图搜索",
+    "description": "基于百度地图 JavaScript API 的 H5 演示，使用原生 JS 与 jQuery 实现了地图加载、定位、周边搜索和本地搜索等核心功能。适用于需要集成百度地图本地 POI 检索能力的 Web 应用场景。",
+    "img": ["/portfolio-imgs/demo-bmap-localsearch.png"],
+    "meta": [
+      ["Stack","jQuery, Bmap API"],
+      ["Repository","https://github.com/zymbth/bmap_localsearchdemo"],
+      ["View",""]
+    ]
+  },
+  {
+    "type": "Games",
+    "briefTitle": "",
+    "title": "2048在线小游戏",
+    "description": "基于 Vue 3 实现的 2048 数字合并小游戏，完整支持核心玩法（移动、合并、生成新块）与丰富的增强功能。包括：游戏状态管理（开始/进行/失败）、多端操作支持（键盘方向键、移动端滑动、虚拟按键）、实时分数计算、撤回功能、本地存储（棋盘状态、得分、用户名）、移动端适配、里程碑提示动画、菜单样式优化，以及带校验与频率限制的排行榜系统（支持上传与查询）。",
+    "img": ["/portfolio-imgs/demo-2048.jpg","/portfolio-imgs/demo-2048-1.jpg"],
+    "meta": [
+      ["Stack","Vue3"],
+      ["Repository",""],
+      ["View","https://game2048.ymzhao.work/"]
+    ]
+  },
+  {
+    "type": "Scripts",
+    "briefTitle": "",
+    "title": "VS Code Snippets",
+    "description": "整理并分享了一套适用于多种开发场景的 Visual Studio Code 自定义代码片段（Snippets）。",
+    "img": [],
+    "meta": [
+      ["Stack",""],
+      ["Repository","https://github.com/zymbth/vscode-snippets"],
+      ["View","https://marketplace.visualstudio.com/items?itemName=ymzhao.ymzhao-code-snippets"]
+    ]
+  },
+  {
+    "type": "Projects",
+    "briefTitle": "",
+    "title": "数据可视化演示集",
+    "description": "该项目为多种前端数据可视化方案的技术演示集合，主要为 D3.js、ECharts 的使用示例，用于探索交互式图表、动态渲染与数据绑定等场景。",
+    "img": ["/portfolio-imgs/demo-data-visulization.jpg","/portfolio-imgs/demo-data-visulization-1.jpg","/portfolio-imgs/demo-data-visulization-2.jpg"],
+    "meta": [
+      ["Stack","Vue3, D3.js, ECharts"],
+      ["Repository","https://github.com/zymbth/demo-visualization"],
+      ["View","https://zymbth.github.io/demo-visualization/"]
     ]
   },
   {
@@ -37,7 +124,7 @@
     "briefTitle": "",
     "title": "",
     "description": "",
-    "img": "",
+    "img": [],
     "meta": [
       ["Stack",""],
       ["Repository",""],

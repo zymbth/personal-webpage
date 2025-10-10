@@ -27,11 +27,11 @@ function handleScroll(event) {
   <div class="no-scroll-bar">
     <div class="wrap-inner" ref="wrapInnerRef">
       <!-- 封面 -->
-      <!-- <AboutCover class="cover" /> -->
+      <AboutCover class="cover" />
       <!-- skills -->
-      <!-- <AboutSkills class="common-block" /> -->
+      <AboutSkills class="common-block" />
       <!-- Career -->
-      <!-- <AboutCareer class="common-block" /> -->
+      <AboutCareer class="common-block" />
       <AboutPortfolio class="common-block" />
       <Copyright class="footer" />
     </div>

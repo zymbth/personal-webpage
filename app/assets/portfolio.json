@@ -121,6 +121,42 @@
   },
   {
     "type": "",
+    "briefTitle": "报告模板",
+    "title": "",
+    "description": "",
+    "img": [],
+    "meta": [
+      ["Stack",""],
+      ["Repository",""],
+      ["View",""]
+    ]
+  },
+  {
+    "type": "",
+    "briefTitle": "Mark库",
+    "title": "",
+    "description": "",
+    "img": [],
+    "meta": [
+      ["Stack",""],
+      ["Repository",""],
+      ["View",""]
+    ]
+  },
+  {
+    "type": "",
+    "briefTitle": "五子棋",
+    "title": "",
+    "description": "",
+    "img": [],
+    "meta": [
+      ["Stack",""],
+      ["Repository",""],
+      ["View",""]
+    ]
+  },
+  {
+    "type": "",
     "briefTitle": "",
     "title": "",
     "description": "",

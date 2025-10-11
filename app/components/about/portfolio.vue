@@ -67,7 +67,12 @@ const REGEX_URL = /^(https?:\/\/[^\s]+)/i
  */
 const types = ref(['All', 'Libraries', 'Projects', 'Open Source', 'Games', 'Scripts', 'Others'].map(t => ({ name: t, hidden: false })))
 const currType = ref(types.value[0].name)
-const data = portfolios.filter(p => p.title)
+const data = portfolios.reduce((prev,curr) => {
+  if(!curr.title) return prev
+  if(!types.value.find(t => t.name === curr.type)) curr.type = 'Others'
+  prev.push(curr)
+  return prev
+}, [])
 types.value.forEach(item => {
   if (item.name === 'All') return
   item.hidden = !data.some(p => p.type === item.name)

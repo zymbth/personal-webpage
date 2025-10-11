@@ -72,7 +72,7 @@
     ]
   },
   {
-    "type": "",
+    "type": "Projects",
     "briefTitle": "",
     "title": "仿饿了么地图搜索",
     "description": "基于百度地图 JavaScript API 的 H5 演示，使用原生 JS 与 jQuery 实现了地图加载、定位、周边搜索和本地搜索等核心功能。适用于需要集成百度地图本地 POI 检索能力的 Web 应用场景。",
@@ -144,15 +144,15 @@
     ]
   },
   {
-    "type": "",
-    "briefTitle": "五子棋",
-    "title": "",
-    "description": "",
+    "type": "Games",
+    "briefTitle": "",
+    "title": "网页小游戏合集",
+    "description": "一个持续更新的网页小游戏集合，目前已实现 2048 和五子棋两款经典游戏。项目采用 Vue3 + Nuxt.js 构建，适配移动端与桌面端。未来计划加入更多轻量级小游戏。",
     "img": [],
     "meta": [
-      ["Stack",""],
-      ["Repository",""],
-      ["View",""]
+      ["Stack","Vue3, Nuxt.js"],
+      ["Repository","https://github.com/zymbth/mini-games"],
+      ["View","https://mini-games.ymzhao.work/"]
     ]
   },
   {

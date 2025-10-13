@@ -120,27 +120,27 @@
     ]
   },
   {
-    "type": "",
-    "briefTitle": "报告模板",
-    "title": "",
-    "description": "",
+    "type": "Projects",
+    "briefTitle": "",
+    "title": "文档工坊",
+    "description": "一个轻量级的在线文档编辑与导出原型。项目实现了多模板初始化、富文本内容编辑以及PDF导出三大核心功能。用户可选择模板快速启动编辑，并支持前端即时导出与服务端高质量生成两种PDF输出模式。本项目旨在探索文档自动化处理的技术链路，模板库与附加功能仍在持续完善中",
     "img": [],
     "meta": [
-      ["Stack",""],
-      ["Repository",""],
-      ["View",""]
+      ["Stack","Vue3, Trumbowyg, Node.js"],
+      ["Repository","Coming soon"],
+      ["View","Coming soon"]
     ]
   },
   {
-    "type": "",
-    "briefTitle": "Mark库",
-    "title": "",
-    "description": "",
+    "type": "Libraries",
+    "briefTitle": "",
+    "title": "MarkerWebLink",
+    "description": "一个轻量级的JavaScript库，旨在为网页内容提供便捷的文本标记与分享能力。用户可以在任何网页上选择一段文字进行高亮标记。标记完成后，库会生成一个唯一的URL，其中包含了被标记文本的位置和内容信息。当其他人访问此URL时，页面加载完毕后，MarkLink会自动定位并高亮显示之前标记的文本片段，实现精准的内容定位与分享。本库适用于知识分享、文章评论、Bug报告等需要精确指向网页特定内容的场景。",
     "img": [],
     "meta": [
-      ["Stack",""],
-      ["Repository",""],
-      ["View",""]
+      ["Stack","JavaScript"],
+      ["Repository","Coming soon"],
+      ["View","Coming soon"]
     ]
   },
   {

@@ -53,7 +53,6 @@ const bgPosi = computed(() => Math.max(0, Math.floor(scrollTop.value / 2)) + 'px
   display: flex;
   justify-content: space-evenly;
   // flex-wrap: wrap;
-  align-content: center;
   align-items: center;
   height: 80vh;
   padding: 10vh 10vw;
@@ -125,8 +124,9 @@ const bgPosi = computed(() => Math.max(0, Math.floor(scrollTop.value / 2)) + 'px
     // height: auto;
     background-position-x: 72%;
     .intro {
-      height: auto;
       flex-direction: column;
+      min-height: 100vh;
+      padding: 0vh 10vw;
     }
     .avatar {
       display: flex;

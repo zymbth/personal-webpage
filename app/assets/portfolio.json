@@ -96,6 +96,18 @@
     ]
   },
   {
+    "type": "Games",
+    "briefTitle": "",
+    "title": "网页小游戏合集",
+    "description": "一个持续更新的网页小游戏集合，目前已实现 2048 和五子棋两款经典游戏。项目采用 Vue3 + Nuxt.js 构建，适配移动端与桌面端。未来计划加入更多轻量级小游戏。",
+    "img": [],
+    "meta": [
+      ["Stack","Vue3, Nuxt.js"],
+      ["Repository","https://github.com/zymbth/mini-games"],
+      ["View","https://mini-games.ymzhao.work/"]
+    ]
+  },
+  {
     "type": "Scripts",
     "briefTitle": "",
     "title": "VS Code Snippets",
@@ -144,15 +156,37 @@
     ]
   },
   {
-    "type": "Games",
+    "type": "Scripts",
     "briefTitle": "",
-    "title": "网页小游戏合集",
-    "description": "一个持续更新的网页小游戏集合，目前已实现 2048 和五子棋两款经典游戏。项目采用 Vue3 + Nuxt.js 构建，适配移动端与桌面端。未来计划加入更多轻量级小游戏。",
+    "title": "Nodejs.cn旗下中文网广告隐藏",
+    "description": "去除/隐藏相关网站的谷歌广告及各类静态、动态插入广告，包含TypeScript、Tailwind、npm、Electron、pnpm、React、ESLint、Nuxt、Koa、Lodash、Fastify等常用的中文网，旗下中文网广告规则一致",
     "img": [],
     "meta": [
-      ["Stack","Vue3, Nuxt.js"],
-      ["Repository","https://github.com/zymbth/mini-games"],
-      ["View","https://mini-games.ymzhao.work/"]
+      ["Stack","JavaScript, CSS"],
+      ["Repository",""],
+      ["View","https://greasyfork.org/zh-CN/scripts/536028-nodejs-cn%E6%97%97%E4%B8%8B%E4%B8%AD%E6%96%87%E7%BD%91%E5%B9%BF%E5%91%8A%E9%9A%90%E8%97%8F"]
+    ]
+  },
+  {
+    "type": "Scripts",
+    "briefTitle": "",
+    "title": "csdn广告隐藏",
+    "description": "通过css隐藏csdn顶部及侧边广告；取消博文中被csdn不要face插入的牛皮藓链接",
+    "img": [],
+    "meta": [
+      ["Stack","CSS"],
+      ["View","https://greasyfork.org/zh-CN/scripts/415912-csdn%E5%B9%BF%E5%91%8A%E9%9A%90%E8%97%8F-%E9%A1%B6%E9%83%A8%E5%8F%8A%E4%BE%A7%E8%BE%B9"]
+    ]
+  },
+  {
+    "type": "Scripts",
+    "briefTitle": "",
+    "title": "csdn文章全屏阅读",
+    "description": "在csdn博客页面侧边工具栏中添加一个类官方按钮，点击开启全屏阅读。",
+    "img": [],
+    "meta": [
+      ["Stack","JavaScript, CSS"],
+      ["View","https://greasyfork.org/zh-CN/scripts/453879-csdn%E6%96%87%E7%AB%A0%E5%85%A8%E5%B1%8F%E9%98%85%E8%AF%BB"]
     ]
   },
   {
